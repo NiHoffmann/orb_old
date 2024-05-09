@@ -3,8 +3,11 @@
  * The MIT License (MIT)
  * Copyright (c) 2022-2023 Damien P. George
  */
+
+
 extern "C"{
     #include <port/micropython_embed.h>
+    #include "c_hello/modc_hello.h"
 }
 
 // This is example 2 script, which will be compiled and executed.

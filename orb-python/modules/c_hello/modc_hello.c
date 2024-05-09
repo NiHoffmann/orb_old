@@ -2,8 +2,10 @@
 
 #include "py/runtime.h"
 #include "py/objstr.h"
+#include "modc_hello.h"
+#include "../../../main.h"
 
-#ifndef ORB_FIRMWARE
+#if ORB_FIRMWARE == 0
 //link to an empty function here
 static mp_obj_t c_hello_hello() {
     return NULL;
@@ -17,7 +19,7 @@ static mp_obj_t c_hello_hello() {
 #endif
 
 static MP_DEFINE_CONST_FUN_OBJ_0(c_hello_hello_obj, c_hello_hello);
-	
+
 static mp_obj_t c_hello2_hello() {
     static const MP_DEFINE_STR_OBJ(hello2_str, "Hello again!");
     return MP_OBJ_FROM_PTR(&hello2_str);
