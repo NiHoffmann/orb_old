@@ -12,14 +12,15 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
-					<Add option="-O2" />
+					<Add option="-Os" />
+					<Add option="-g" />
 					<Add directory="orb-python" />
 					<Add directory="orb-python/micropython_embed" />
+					<Add directory="orb-python/micropython_embed/port" />
 					<Add directory="orb-python/modules" />
+					<Add directory="orb-python/modules_cpp" />
+					<Add directory="../ORB-Python" />
 				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
@@ -28,6 +29,7 @@
 		</Compiler>
 		<Unit filename="main.cpp" />
 		<Unit filename="orb-python/build-embed/genhdr/mpversion.h" />
+		<Unit filename="orb-python/flags.h" />
 		<Unit filename="orb-python/micropython_embed/extmod/modplatform.h" />
 		<Unit filename="orb-python/micropython_embed/genhdr/moduledefs.h" />
 		<Unit filename="orb-python/micropython_embed/genhdr/mpversion.h" />
@@ -468,11 +470,18 @@
 		<Unit filename="orb-python/micropython_embed/shared/runtime/gchelper_generic.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="orb-python/modules/c_hello/cpp_test.cpp" />
 		<Unit filename="orb-python/modules/c_hello/modc_hello.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="orb-python/modules/c_hello/modc_hello.h" />
+		<Unit filename="orb-python/modules_cpp/SimpleTemplate.h" />
+		<Unit filename="orb-python/modules_cpp/SimpleTemplateWrapper.cpp" />
+		<Unit filename="orb-python/modules_cpp/SimpleTemplateWrapper.h" />
 		<Unit filename="orb-python/mpconfigport.h" />
-		<Extensions />
+		<Extensions>
+			<debugger>
+				<search_path add="bin\Release" />
+			</debugger>
+		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

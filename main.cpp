@@ -3,12 +3,12 @@
  * The MIT License (MIT)
  * Copyright (c) 2022-2023 Damien P. George
  */
-
-
+#include <iostream>
 extern "C"{
     #include <port/micropython_embed.h>
     #include "c_hello/modc_hello.h"
 }
+
 
 // This is example 2 script, which will be compiled and executed.
 static const char *example =
@@ -21,6 +21,7 @@ static const char *example =
 static char heap[8 * 1024];
 
 int main() {
+    std::cout << "hi" << std::endl;
     // Initialise MicroPython.
     //
     // Note: &stack_top below should be good enough for many cases.
@@ -36,7 +37,6 @@ int main() {
 
     // Deinitialise MicroPython.
     mp_embed_deinit();
-
     return 0;
 }
 
