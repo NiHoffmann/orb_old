@@ -3,7 +3,7 @@
 #include "py/runtime.h"
 #include "py/objstr.h"
 #include "modc_hello.h"
-#include "../../../main.h"
+#include <flags.h>
 
 #if ORB_FIRMWARE == 0
 //link to an empty function here
@@ -11,9 +11,14 @@ static mp_obj_t c_hello_hello() {
     return NULL;
 }
 #else
+#include "SimpleTemplateWrapper.h"
+
 //link to the cpp function here
 static mp_obj_t c_hello_hello() {
     static const MP_DEFINE_STR_OBJ(hello_str, "Hello!");
+    struct SimpleTemplateWrapper* wrapper = createSimpleTemplateWrapper(244);
+    printSimpleTemplateWrapper(wrapper);
+    destroySimpleTemplateWrapper(wrapper);
     return MP_OBJ_FROM_PTR(&hello_str);
 }
 #endif
