@@ -26,7 +26,7 @@ static mp_obj_t c_hello_hello() {
 static MP_DEFINE_CONST_FUN_OBJ_0(c_hello_hello_obj, c_hello_hello);
 
 static mp_obj_t c_hello2_hello() {
-    static const MP_DEFINE_STR_OBJ(hello2_str, "Hello again!");
+    static const MP_DEFINE_STR_OBJ(hello2_str, "Hello again! How are you doing?");
     return MP_OBJ_FROM_PTR(&hello2_str);
 }
 static MP_DEFINE_CONST_FUN_OBJ_0(c_hello_hello2_obj, c_hello2_hello);
