@@ -2,44 +2,14 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Release" />
-	<File name="orb-python\modules_cpp\SimpleTemplate.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="219" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="orb-python\modules_cpp\SimpleTemplateWrapper.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="156" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="orb-python\micropython_embed\py\compile.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="79397" topLine="1985" />
-		</Cursor>
-	</File>
-	<File name="orb-python\micropython_embed\py\modbuiltins.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="21634" topLine="565" />
-		</Cursor>
-	</File>
-	<File name="orb-python\mpconfigport.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="583" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="orb-python\flags.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="orb-python\flags.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="22" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="orb-python\micropython_embed\py\mpconfig.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4197" topLine="67" />
-		</Cursor>
-	</File>
-	<File name="orb-python\modules\c_hello\modc_hello.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="666" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="orb-python\micropython_embed\py\obj.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -47,9 +17,49 @@
 			<Cursor1 position="14385" topLine="349" />
 		</Cursor>
 	</File>
+	<File name="orb-python\micropython_embed\py\compile.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="79397" topLine="1985" />
+		</Cursor>
+	</File>
+	<File name="orb-python\micropython_embed\port\mphalport.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="8" />
+		</Cursor>
+	</File>
 	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="519" topLine="16" />
+			<Cursor1 position="289" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="orb-python\mpconfigport.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="651" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="orb-python\micropython_embed\port\embed_util.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2281" topLine="54" />
+		</Cursor>
+	</File>
+	<File name="orb-python\modules\c_hello\modc_hello.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="973" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="orb-python\micropython_embed\py\mpconfig.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4197" topLine="67" />
+		</Cursor>
+	</File>
+	<File name="orb-python\micropython_embed\py\modbuiltins.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="21634" topLine="565" />
+		</Cursor>
+	</File>
+	<File name="orb-python\modules_cpp\SimpleTemplate.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="219" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
