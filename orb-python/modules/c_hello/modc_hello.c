@@ -3,7 +3,6 @@
 #include "py/runtime.h"
 #include "py/objstr.h"
 #include "modc_hello.h"
-#include <flags.h>
 
 #if ORB_FIRMWARE == 0
 //link to an empty function here
