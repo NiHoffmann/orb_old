@@ -857,14 +857,16 @@ _mm_free (void *__aligned_ptr)
 # 40 "../micropython/ports/embed/port/mpconfigport_common.h" 2
 # 8 "./mpconfigport.h" 2
 # 92 "../micropython/py/mpconfig.h" 2
+# 830 "../micropython/py/mpconfig.h"
+
+# 830 "../micropython/py/mpconfig.h"
+typedef float mp_float_t;
 # 30 "<stdin>" 2
 
 
 
 
 
-
-# 35 "<stdin>"
 QCFG(BYTES_IN_LEN, (1))
 QCFG(BYTES_IN_HASH, (0))
 
@@ -1018,6 +1020,8 @@ Q(__class__)
 
 Q(__class__)
 
+Q(__complex__)
+
 Q(__contains__)
 
 Q(__delitem__)
@@ -1031,6 +1035,8 @@ Q(__eq__)
 Q(__eq__)
 
 Q(__exit__)
+
+Q(__float__)
 
 Q(__ge__)
 
@@ -1214,6 +1220,10 @@ Q(closure)
 
 Q(collect)
 
+Q(complex)
+
+Q(complex)
+
 Q(copy)
 
 Q(copy)
@@ -1249,6 +1259,10 @@ Q(exec)
 Q(extend)
 
 Q(find)
+
+Q(float)
+
+Q(float)
 
 Q(format)
 
@@ -1293,6 +1307,8 @@ Q(hello2)
 Q(hex)
 
 Q(id)
+
+Q(imag)
 
 Q(index)
 
@@ -1395,6 +1411,8 @@ Q(range)
 Q(range)
 
 Q(range)
+
+Q(real)
 
 Q(remove)
 

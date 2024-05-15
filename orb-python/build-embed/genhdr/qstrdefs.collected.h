@@ -126,6 +126,8 @@ Q(__class__)
 
 Q(__class__)
 
+Q(__complex__)
+
 Q(__contains__)
 
 Q(__delitem__)
@@ -139,6 +141,8 @@ Q(__eq__)
 Q(__eq__)
 
 Q(__exit__)
+
+Q(__float__)
 
 Q(__ge__)
 
@@ -322,6 +326,10 @@ Q(closure)
 
 Q(collect)
 
+Q(complex)
+
+Q(complex)
+
 Q(copy)
 
 Q(copy)
@@ -357,6 +365,10 @@ Q(exec)
 Q(extend)
 
 Q(find)
+
+Q(float)
+
+Q(float)
 
 Q(format)
 
@@ -401,6 +413,8 @@ Q(hello2)
 Q(hex)
 
 Q(id)
+
+Q(imag)
 
 Q(index)
 
@@ -503,6 +517,8 @@ Q(range)
 Q(range)
 
 Q(range)
+
+Q(real)
 
 Q(remove)
 

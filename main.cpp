@@ -16,6 +16,7 @@ static const char *example =
     "import c_hello\n"
     "print(c_hello.hello())\n"
     "print(c_hello.hello2())\n"
+    "print(2.5)\n"
     ;
 
 // This array is the MicroPython GC heap.
