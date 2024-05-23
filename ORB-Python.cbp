@@ -31,6 +31,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ORB-Python/modules/orb/led/led.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.cpp" />
 		<Unit filename="orb-python/build-embed/genhdr/mpversion.h" />
 		<Unit filename="orb-python/micropython_embed/extmod/modplatform.h" />

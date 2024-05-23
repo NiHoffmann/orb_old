@@ -170,6 +170,8 @@ Q(__init__)
 
 Q(__init__)
 
+Q(__init__)
+
 Q(__int__)
 
 Q(__isub__)
@@ -187,6 +189,8 @@ Q(__main__)
 Q(__main__)
 
 Q(__module__)
+
+Q(__name__)
 
 Q(__name__)
 
@@ -414,6 +418,8 @@ Q(hex)
 
 Q(id)
 
+Q(id)
+
 Q(imag)
 
 Q(index)
@@ -464,6 +470,10 @@ Q(keys)
 
 Q(keys)
 
+Q(led)
+
+Q(led)
+
 Q(len)
 
 Q(list)
@@ -499,6 +509,10 @@ Q(object)
 Q(object)
 
 Q(oct)
+
+Q(orb)
+
+Q(orb)
 
 Q(ord)
 

@@ -8,22 +8,19 @@
 
 extern "C"{
     #include <port/micropython_embed.h>
-    #include "c_hello/modc_hello.h"
 }
 
 // This is example 2 script, which will be compiled and executed.
 static const char *example =
-    "import c_hello\n"
-    "print(c_hello.hello())\n"
-    "print(c_hello.hello2())\n"
-    "print(2.5)\n"
+    "from orb import led\n"
+    "a = led(1)\n"
+    "print(a)"
     ;
 
 // This array is the MicroPython GC heap.
 static char heap[8 * 1024];
 
 int main() {
-    std::cout << "hi" << std::endl;
     // Initialise MicroPython.
     //
     // Note: &stack_top below should be good enough for many cases.
@@ -51,11 +48,11 @@ int main() {
 
     // Close the file
     file.close();
-    mp_embed_exec_mpy(byteArray, fileSize);
+    //mp_embed_exec_mpy(byteArray, fileSize);
     delete[] byteArray;
 
     // Run the example scripts (they will be compiled first).
-    //mp_embed_exec_str(example);
+    mp_embed_exec_str(example);
 
     // Deinitialise MicroPython.
     mp_embed_deinit();
