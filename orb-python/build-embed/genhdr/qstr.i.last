@@ -5112,7 +5112,7 @@ mp_uint_t mp_native_from_obj(mp_obj_t obj, mp_uint_t type);
 mp_obj_t mp_native_to_obj(mp_uint_t val, mp_uint_t type);
 # 3 "modules/orb/orb.c" 2
 # 1 "modules/orb/led/led.h" 1
-const mp_obj_module_t orb_led_module;
+extern const mp_obj_type_t orb_led_type;
 # 4 "modules/orb/orb.c" 2
 
 static mp_obj_t orb___init__(void) {
@@ -5137,7 +5137,8 @@ MP_REGISTER_ROOT_POINTER(int orb_initialised);
 static const mp_rom_map_elem_t orb_globals_table[] = {
     { ((mp_obj_t)((((mp_uint_t)(MP_QSTR___name__)) << 3) | 2)), ((mp_obj_t)((((mp_uint_t)(MP_QSTR_orb)) << 3) | 2)) },
     { ((mp_obj_t)((((mp_uint_t)(MP_QSTR___init__)) << 3) | 2)), (&orb___init___obj) },
-    { ((mp_obj_t)((((mp_uint_t)(MP_QSTR_led)) << 3) | 2)), (&orb_led_module)},
+
+    { ((mp_obj_t)((((mp_uint_t)(MP_QSTR_led)) << 3) | 2)), (&orb_led_type) },
 };
 static const mp_obj_dict_t orb_globals = { .base = {&mp_type_dict}, .map = { .all_keys_are_qstrs = 1, .is_fixed = 1, .is_ordered = 1, .used = (sizeof(orb_globals_table) / sizeof((orb_globals_table)[0])), .alloc = (sizeof(orb_globals_table) / sizeof((orb_globals_table)[0])), .table = (mp_map_elem_t *)(mp_rom_map_elem_t *)orb_globals_table, }, };
 
@@ -7716,11 +7717,22 @@ mp_obj_t mp_obj_bytes_fromhex(mp_obj_t type_in, mp_obj_t data);
 extern const mp_obj_dict_t mp_obj_str_locals_dict;
 # 4 "modules/orb/led/led.c" 2
 # 1 "modules/orb/led/led.h" 1
-const mp_obj_module_t orb_led_module;
+extern const mp_obj_type_t orb_led_type;
 # 5 "modules/orb/led/led.c" 2
 
+const mp_obj_type_t orb_led_type;
+
+typedef struct _orb_led_obj_t {
+    mp_obj_base_t base;
+    uint8_t id;
+} orb_led_obj_t;
+
+static const orb_led_obj_t orb_led_obj[] = {
+    {{&orb_led_type}, .id = 0},
+};
+
 static void mp_orb_led_print(const mp_print_t *print, mp_obj_t self_in, mp_print_kind_t kind) {
-    mp_printf(print, "LED(%u)", 1);
+    mp_printf(print, "LED(%u)", 2);
 }
 
 
@@ -7736,19 +7748,16 @@ static mp_obj_t mp_orb_led_make_new(const mp_obj_type_t *type, size_t n_args, si
     mp_arg_parse_all_kw_array(n_args, n_kw, all_args, (sizeof(allowed_args) / sizeof((allowed_args)[0])), allowed_args, args);
 
     int led_id = args[ARG_id].u_obj;
+    const orb_led_obj_t *self = &orb_led_obj[led_id];
 
-    return ((mp_obj_t)(
-# 24 "modules/orb/led/led.c" 3 4
-          ((void *)0)
-# 24 "modules/orb/led/led.c"
-          ));
+    return ((mp_obj_t)(self));
 }
 
 static const mp_rom_map_elem_t orb_led_local_dict_table[] = {
 };
 static const mp_obj_dict_t orb_led_local = { .base = {&mp_type_dict}, .map = { .all_keys_are_qstrs = 1, .is_fixed = 1, .is_ordered = 1, .used = (sizeof(orb_led_local_dict_table) / sizeof((orb_led_local_dict_table)[0])), .alloc = (sizeof(orb_led_local_dict_table) / sizeof((orb_led_local_dict_table)[0])), .table = (mp_map_elem_t *)(mp_rom_map_elem_t *)orb_led_local_dict_table, }, };
 
-const mp_obj_type_t orb_led_type = { .base = { &mp_type_type }, .flags = (0x0000), .name = MP_QSTR_led, .slot_index_make_new = 1, .slot_index_print = 2, .slot_index_locals_dict = 3, .slots = { mp_orb_led_make_new, mp_orb_led_make_new, &orb_led_local, } }
+const mp_obj_type_t orb_led_type = { .base = { &mp_type_type }, .flags = (0x0000), .name = MP_QSTR_led, .slot_index_make_new = 1, .slot_index_print = 2, .slot_index_locals_dict = 3, .slots = { mp_orb_led_make_new, mp_orb_led_print, &orb_led_local, } }
 
 
 

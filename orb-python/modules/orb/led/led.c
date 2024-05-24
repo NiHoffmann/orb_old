@@ -3,26 +3,36 @@
 #include "py/objstr.h"
 #include "led.h"
 
+const mp_obj_type_t orb_led_type;
+
+typedef struct _orb_led_obj_t {
+    mp_obj_base_t base;
+    uint8_t id;
+} orb_led_obj_t;
+
+static const orb_led_obj_t orb_led_obj[] = {
+    {{&orb_led_type}, .id = 0},
+    {{&orb_led_type}, .id = 1},
+    {{&orb_led_type}, .id = 2},
+};
+
 static void mp_orb_led_print(const mp_print_t *print, mp_obj_t self_in, mp_print_kind_t kind) {
-    mp_printf(print, "LED(%u)", 1);
+    const orb_led_obj_t *self = MP_OBJ_TO_PTR(self_in);
+    mp_printf(print, "LED(%u)", self->id);
 }
 
 // for make_new
 static mp_obj_t mp_orb_led_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *all_args) {
-    enum { ARG_id };
-    //user led allows a single int as arguemnt
-    static const mp_arg_t allowed_args[] = {
-        { MP_QSTR_id, MP_ARG_OBJ, {.u_obj = MP_OBJ_NEW_SMALL_INT(-1) } },
-    };
+    //check if only one arg
+    mp_arg_check_num(n_args, n_kw, 1, 1, true);
 
-    // parse args
-    mp_arg_val_t args[MP_ARRAY_SIZE(allowed_args)];
-    mp_arg_parse_all_kw_array(n_args, n_kw, all_args, MP_ARRAY_SIZE(allowed_args), allowed_args, args);
-
-    int led_id = args[ARG_id].u_obj;
+    //cast argument to id value
+    int led_id =  mp_obj_get_int(all_args[0]);
+    //get pointer from led const array (shared objects for user leds)
+    const orb_led_obj_t *self = &orb_led_obj[led_id];
 
     //TODO MAKE THIS A POINTER TO AN LED OBJECT WITH LED ID
-    return MP_OBJ_FROM_PTR(NULL);
+    return MP_OBJ_FROM_PTR(self);
 }
 
 static const mp_rom_map_elem_t orb_led_local_dict_table[] = {
@@ -34,7 +44,7 @@ MP_DEFINE_CONST_OBJ_TYPE(
     MP_QSTR_led,
     MP_TYPE_FLAG_NONE,
     make_new, mp_orb_led_make_new,
-    print, mp_orb_led_make_new,
+    print, mp_orb_led_print,
     locals_dict, &orb_led_local
     );
 
