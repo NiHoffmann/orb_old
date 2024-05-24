@@ -500,6 +500,8 @@ Q(mem_free)
 
 Q(micropython)
 
+Q(mode)
+
 Q(module)
 
 Q(next)
@@ -607,6 +609,8 @@ Q(type)
 Q(update)
 
 Q(upper)
+
+Q(value)
 
 Q(value)
 

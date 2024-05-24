@@ -13,8 +13,8 @@ extern "C"{
 // This is example 2 script, which will be compiled and executed.
 static const char *example =
     "from orb import led\n"
-    "a = led(1)\n"
-    "print(a)"
+    "a = led(id=0)\n"
+    "print(a.value())"
     ;
 
 // This array is the MicroPython GC heap.
