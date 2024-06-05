@@ -33,4 +33,5 @@ const mp_obj_module_t orb_module = {
 
 // Register the module to make it available in Python.
 // Note: subpackages should not be registered with MP_REGISTER_MODULE.
+//instead they are added to the orb_globals table
 MP_REGISTER_MODULE(MP_QSTR_orb, orb_module);

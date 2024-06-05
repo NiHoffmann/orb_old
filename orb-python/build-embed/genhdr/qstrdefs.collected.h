@@ -52,6 +52,12 @@ Q(KeyboardInterrupt)
 
 Q(KeyboardInterrupt)
 
+Q(LED_1)
+
+Q(LED_2)
+
+Q(LED_POWER)
+
 Q(LookupError)
 
 Q(LookupError)
@@ -204,8 +210,6 @@ Q(__name__)
 
 Q(__name__)
 
-Q(__name__)
-
 Q(__ne__)
 
 Q(__new__)
@@ -306,10 +310,6 @@ Q(bytes)
 
 Q(bytes)
 
-Q(c_hello)
-
-Q(c_hello)
-
 Q(callable)
 
 Q(chr)
@@ -409,10 +409,6 @@ Q(globals)
 Q(hasattr)
 
 Q(hash)
-
-Q(hello)
-
-Q(hello2)
 
 Q(hex)
 

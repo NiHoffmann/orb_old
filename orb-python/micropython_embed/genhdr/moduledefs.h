@@ -8,10 +8,6 @@ extern const struct _mp_obj_module_t mp_module_builtins;
 #undef MODULE_DEF_BUILTINS
 #define MODULE_DEF_BUILTINS { MP_ROM_QSTR(MP_QSTR_builtins), MP_ROM_PTR(&mp_module_builtins) },
 
-extern const struct _mp_obj_module_t c_hello_module;
-#undef MODULE_DEF_C_HELLO
-#define MODULE_DEF_C_HELLO { MP_ROM_QSTR(MP_QSTR_c_hello), MP_ROM_PTR(&c_hello_module) },
-
 extern const struct _mp_obj_module_t mp_module_gc;
 #undef MODULE_DEF_GC
 #define MODULE_DEF_GC { MP_ROM_QSTR(MP_QSTR_gc), MP_ROM_PTR(&mp_module_gc) },
@@ -23,7 +19,6 @@ extern const struct _mp_obj_module_t orb_module;
 
 #define MICROPY_REGISTERED_MODULES \
     MODULE_DEF_BUILTINS \
-    MODULE_DEF_C_HELLO \
     MODULE_DEF_GC \
     MODULE_DEF_ORB \
     MODULE_DEF___MAIN__ \

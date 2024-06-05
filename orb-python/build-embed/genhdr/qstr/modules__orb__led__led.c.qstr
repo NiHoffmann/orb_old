@@ -1,4 +1,7 @@
 Q(id)
 Q(mode)
 Q(value)
+Q(LED_POWER)
+Q(LED_1)
+Q(LED_2)
 Q(led)
