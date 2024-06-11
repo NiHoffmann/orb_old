@@ -7,18 +7,22 @@ struct LedWrapper {
 };
 
 // Function to create an instance of LedWrapper
-extern "C" struct LedWrapper* createLedWrapper() {
+extern "C" struct LedWrapper* createLedWrapper(int ledId) {
     struct LedWrapper* wrapper = new LedWrapper;
-    wrapper->instance = new LedWrapperStruct();
+    wrapper->instance = new LedWrapperStruct(ledId);
     return wrapper;
 }
 
-extern "C" int setValueLedWrapper(struct LedWrapper* wrapper, int value){
-    return wrapper->instance->setValue(value);
+extern "C" void setLedValue(struct LedWrapper* wrapper, int value){
+    wrapper->instance->setValue(value);
 }
 
-extern "C" int getValueLedWrapper(struct LedWrapper* wrapper) {
+extern "C" int getLedValue(struct LedWrapper* wrapper) {
     return wrapper->instance->getValue();
+}
+
+extern "C" void blinkLed(struct LedWrapper* wrapper, int interval, int duration) {
+    wrapper->instance->blink(interval, duration);
 }
 
 // Function to destroy an instance of LedWrapper

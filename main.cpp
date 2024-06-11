@@ -14,9 +14,7 @@ extern "C"{
 static const char *example =
     "from orb import led\n"
     "a = led(id=led.LED_POWER)\n"
-    "print(a)\n"
-    "print(a.value())\n"
-    "print(a.value(1))"
+    "print(a.blink(interval=10,duration=20)\n)"
     ;
 
 // This array is the MicroPython GC heap.

@@ -294,6 +294,8 @@ Q(args)
 
 Q(bin)
 
+Q(blink)
+
 Q(bool)
 
 Q(bool)
@@ -353,6 +355,8 @@ Q(dir)
 Q(disable)
 
 Q(divmod)
+
+Q(duration)
 
 Q(enable)
 
@@ -429,6 +433,8 @@ Q(insert)
 Q(int)
 
 Q(int)
+
+Q(interval)
 
 Q(isalpha)
 

@@ -2554,49 +2554,44 @@ MP_REGISTER_MODULE(MP_QSTR_orb, orb_module);
 # 0 "<built-in>"
 # 0 "<command-line>"
 # 1 "modules/orb/led/led.c"
-
-# 1 "../micropython/py/runtime.h" 1
-# 29 "../micropython/py/runtime.h"
-# 1 "../micropython/py/mpstate.h" 1
-# 29 "../micropython/py/mpstate.h"
-# 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h" 1 3 4
-# 9 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h" 3 4
-# 1 "C:/msys64/ucrt64/include/stdint.h" 1 3 4
-# 28 "C:/msys64/ucrt64/include/stdint.h" 3 4
-# 1 "C:/msys64/ucrt64/include/crtdefs.h" 1 3 4
-# 10 "C:/msys64/ucrt64/include/crtdefs.h" 3 4
-# 1 "C:/msys64/ucrt64/include/corecrt.h" 1 3 4
-# 10 "C:/msys64/ucrt64/include/corecrt.h" 3 4
-# 1 "C:/msys64/ucrt64/include/_mingw.h" 1 3 4
-# 10 "C:/msys64/ucrt64/include/_mingw.h" 3 4
-# 1 "C:/msys64/ucrt64/include/_mingw_mac.h" 1 3 4
-# 98 "C:/msys64/ucrt64/include/_mingw_mac.h" 3 4
+# 1 "../micropython/py/obj.h" 1
+# 29 "../micropython/py/obj.h"
+# 1 "C:/msys64/ucrt64/include/assert.h" 1 3
+# 15 "C:/msys64/ucrt64/include/assert.h" 3
+# 1 "C:/msys64/ucrt64/include/crtdefs.h" 1 3
+# 10 "C:/msys64/ucrt64/include/crtdefs.h" 3
+# 1 "C:/msys64/ucrt64/include/corecrt.h" 1 3
+# 10 "C:/msys64/ucrt64/include/corecrt.h" 3
+# 1 "C:/msys64/ucrt64/include/_mingw.h" 1 3
+# 10 "C:/msys64/ucrt64/include/_mingw.h" 3
+# 1 "C:/msys64/ucrt64/include/_mingw_mac.h" 1 3
+# 98 "C:/msys64/ucrt64/include/_mingw_mac.h" 3
              
-# 107 "C:/msys64/ucrt64/include/_mingw_mac.h" 3 4
+# 107 "C:/msys64/ucrt64/include/_mingw_mac.h" 3
              
-# 306 "C:/msys64/ucrt64/include/_mingw_mac.h" 3 4
+# 306 "C:/msys64/ucrt64/include/_mingw_mac.h" 3
        
-# 384 "C:/msys64/ucrt64/include/_mingw_mac.h" 3 4
+# 384 "C:/msys64/ucrt64/include/_mingw_mac.h" 3
        
-# 11 "C:/msys64/ucrt64/include/_mingw.h" 2 3 4
-# 1 "C:/msys64/ucrt64/include/_mingw_secapi.h" 1 3 4
-# 12 "C:/msys64/ucrt64/include/_mingw.h" 2 3 4
-# 282 "C:/msys64/ucrt64/include/_mingw.h" 3 4
-# 1 "C:/msys64/ucrt64/include/vadefs.h" 1 3 4
-# 9 "C:/msys64/ucrt64/include/vadefs.h" 3 4
-# 1 "C:/msys64/ucrt64/include/_mingw.h" 1 3 4
-# 661 "C:/msys64/ucrt64/include/_mingw.h" 3 4
-# 1 "C:/msys64/ucrt64/include/sdks/_mingw_ddk.h" 1 3 4
-# 662 "C:/msys64/ucrt64/include/_mingw.h" 2 3 4
-# 10 "C:/msys64/ucrt64/include/vadefs.h" 2 3 4
+# 11 "C:/msys64/ucrt64/include/_mingw.h" 2 3
+# 1 "C:/msys64/ucrt64/include/_mingw_secapi.h" 1 3
+# 12 "C:/msys64/ucrt64/include/_mingw.h" 2 3
+# 282 "C:/msys64/ucrt64/include/_mingw.h" 3
+# 1 "C:/msys64/ucrt64/include/vadefs.h" 1 3
+# 9 "C:/msys64/ucrt64/include/vadefs.h" 3
+# 1 "C:/msys64/ucrt64/include/_mingw.h" 1 3
+# 661 "C:/msys64/ucrt64/include/_mingw.h" 3
+# 1 "C:/msys64/ucrt64/include/sdks/_mingw_ddk.h" 1 3
+# 662 "C:/msys64/ucrt64/include/_mingw.h" 2 3
+# 10 "C:/msys64/ucrt64/include/vadefs.h" 2 3
 
 
 
 
 #pragma pack(push,_CRT_PACKING)
-# 24 "C:/msys64/ucrt64/include/vadefs.h" 3 4
+# 24 "C:/msys64/ucrt64/include/vadefs.h" 3
   
-# 24 "C:/msys64/ucrt64/include/vadefs.h" 3 4
+# 24 "C:/msys64/ucrt64/include/vadefs.h" 3
  typedef __builtin_va_list __gnuc_va_list;
 
 
@@ -2605,10 +2600,10 @@ MP_REGISTER_MODULE(MP_QSTR_orb, orb_module);
 
 
   typedef __gnuc_va_list va_list;
-# 103 "C:/msys64/ucrt64/include/vadefs.h" 3 4
+# 103 "C:/msys64/ucrt64/include/vadefs.h" 3
 #pragma pack(pop)
-# 283 "C:/msys64/ucrt64/include/_mingw.h" 2 3 4
-# 580 "C:/msys64/ucrt64/include/_mingw.h" 3 4
+# 283 "C:/msys64/ucrt64/include/_mingw.h" 2 3
+# 580 "C:/msys64/ucrt64/include/_mingw.h" 3
 void __attribute__((__cdecl__)) __debugbreak(void);
 extern __inline__ __attribute__((__always_inline__,__gnu_inline__)) void __attribute__((__cdecl__)) __debugbreak(void)
 {
@@ -2622,26 +2617,26 @@ extern __inline__ __attribute__((__always_inline__,__gnu_inline__)) void __attri
 
 
 }
-# 601 "C:/msys64/ucrt64/include/_mingw.h" 3 4
+# 601 "C:/msys64/ucrt64/include/_mingw.h" 3
 void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) __fastfail(unsigned int code);
 extern __inline__ __attribute__((__always_inline__,__gnu_inline__)) void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) __fastfail(unsigned int code)
 {
 
   __asm__ __volatile__("int {$}0x29"::"c"(code));
-# 615 "C:/msys64/ucrt64/include/_mingw.h" 3 4
+# 615 "C:/msys64/ucrt64/include/_mingw.h" 3
   __builtin_unreachable();
 }
-# 641 "C:/msys64/ucrt64/include/_mingw.h" 3 4
+# 641 "C:/msys64/ucrt64/include/_mingw.h" 3
 const char *__mingw_get_crt_info (void);
-# 11 "C:/msys64/ucrt64/include/corecrt.h" 2 3 4
+# 11 "C:/msys64/ucrt64/include/corecrt.h" 2 3
 
 
 
 
 #pragma pack(push,_CRT_PACKING)
-# 35 "C:/msys64/ucrt64/include/corecrt.h" 3 4
+# 35 "C:/msys64/ucrt64/include/corecrt.h" 3
 __extension__ typedef unsigned long long size_t;
-# 45 "C:/msys64/ucrt64/include/corecrt.h" 3 4
+# 45 "C:/msys64/ucrt64/include/corecrt.h" 3
 __extension__ typedef long long ssize_t;
 
 
@@ -2650,13 +2645,13 @@ __extension__ typedef long long ssize_t;
 
 
 typedef size_t rsize_t;
-# 62 "C:/msys64/ucrt64/include/corecrt.h" 3 4
+# 62 "C:/msys64/ucrt64/include/corecrt.h" 3
 __extension__ typedef long long intptr_t;
-# 75 "C:/msys64/ucrt64/include/corecrt.h" 3 4
+# 75 "C:/msys64/ucrt64/include/corecrt.h" 3
 __extension__ typedef unsigned long long uintptr_t;
-# 88 "C:/msys64/ucrt64/include/corecrt.h" 3 4
+# 88 "C:/msys64/ucrt64/include/corecrt.h" 3
 __extension__ typedef long long ptrdiff_t;
-# 98 "C:/msys64/ucrt64/include/corecrt.h" 3 4
+# 98 "C:/msys64/ucrt64/include/corecrt.h" 3
 typedef unsigned short wchar_t;
 
 
@@ -2683,9 +2678,9 @@ typedef long __time32_t;
 
 
 __extension__ typedef long long __time64_t;
-# 138 "C:/msys64/ucrt64/include/corecrt.h" 3 4
+# 138 "C:/msys64/ucrt64/include/corecrt.h" 3
 typedef __time64_t time_t;
-# 430 "C:/msys64/ucrt64/include/corecrt.h" 3 4
+# 430 "C:/msys64/ucrt64/include/corecrt.h" 3
 struct threadlocaleinfostruct;
 struct threadmbcinfostruct;
 typedef struct threadlocaleinfostruct *pthreadlocinfo;
@@ -2713,15 +2708,32 @@ typedef struct threadlocaleinfostruct {
   const unsigned short *_locale_pctype;
   int _locale_mb_cur_max;
   unsigned int _locale_lc_codepage;
-# 482 "C:/msys64/ucrt64/include/corecrt.h" 3 4
+# 482 "C:/msys64/ucrt64/include/corecrt.h" 3
 } threadlocinfo;
-# 501 "C:/msys64/ucrt64/include/corecrt.h" 3 4
+# 501 "C:/msys64/ucrt64/include/corecrt.h" 3
 #pragma pack(pop)
-# 11 "C:/msys64/ucrt64/include/crtdefs.h" 2 3 4
-# 29 "C:/msys64/ucrt64/include/stdint.h" 2 3 4
+# 11 "C:/msys64/ucrt64/include/crtdefs.h" 2 3
+# 16 "C:/msys64/ucrt64/include/assert.h" 2 3
+# 24 "C:/msys64/ucrt64/include/assert.h" 3
+__attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) _wassert(const wchar_t *_Message,const wchar_t *_File,unsigned _Line);
+__attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) _assert (const char *_Message, const char *_File, unsigned _Line);
+# 30 "../micropython/py/obj.h" 2
+
+# 1 "../micropython/py/mpconfig.h" 1
+# 91 "../micropython/py/mpconfig.h"
+# 1 "./mpconfigport.h" 1
 
 
 
+
+
+
+# 1 "../micropython/ports/embed/port/mpconfigport_common.h" 1
+# 27 "../micropython/ports/embed/port/mpconfigport_common.h"
+# 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h" 1 3 4
+# 9 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h" 3 4
+# 1 "C:/msys64/ucrt64/include/stdint.h" 1 3 4
+# 32 "C:/msys64/ucrt64/include/stdint.h" 3 4
 # 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h" 1 3 4
 # 1 "C:/msys64/ucrt64/include/stddef.h" 1 3 4
 # 18 "C:/msys64/ucrt64/include/stddef.h" 3 4
@@ -2774,19 +2786,10 @@ __extension__ typedef unsigned long long uint_fast64_t;
 __extension__ typedef long long intmax_t;
 __extension__ typedef unsigned long long uintmax_t;
 # 10 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h" 2 3 4
-# 30 "../micropython/py/mpstate.h" 2
-
-# 1 "../micropython/py/mpconfig.h" 1
-# 91 "../micropython/py/mpconfig.h"
-# 1 "./mpconfigport.h" 1
+# 28 "../micropython/ports/embed/port/mpconfigport_common.h" 2
 
 
 
-
-
-
-# 1 "../micropython/ports/embed/port/mpconfigport_common.h" 1
-# 31 "../micropython/ports/embed/port/mpconfigport_common.h"
 
 # 31 "../micropython/ports/embed/port/mpconfigport_common.h"
 typedef intptr_t mp_int_t;
@@ -3415,9 +3418,7 @@ _mm_free (void *__aligned_ptr)
 
 # 830 "../micropython/py/mpconfig.h"
 typedef float mp_float_t;
-# 32 "../micropython/py/mpstate.h" 2
-# 1 "../micropython/py/mpthread.h" 1
-# 33 "../micropython/py/mpstate.h" 2
+# 32 "../micropython/py/obj.h" 2
 # 1 "../micropython/py/misc.h" 1
 # 33 "../micropython/py/misc.h"
 # 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdbool.h" 1 3 4
@@ -3597,83 +3598,7 @@ typedef union _mp_float_union_t {
 } mp_float_union_t;
 # 328 "../micropython/py/misc.h"
 typedef const char *mp_rom_error_text_t;
-# 34 "../micropython/py/mpstate.h" 2
-# 1 "../micropython/py/nlr.h" 1
-# 32 "../micropython/py/nlr.h"
-# 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h" 1 3 4
-# 33 "../micropython/py/nlr.h" 2
-# 1 "C:/msys64/ucrt64/include/assert.h" 1 3
-# 24 "C:/msys64/ucrt64/include/assert.h" 3
-
-# 24 "C:/msys64/ucrt64/include/assert.h" 3 4
-__attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) _wassert(const wchar_t *_Message,const wchar_t *_File,unsigned _Line);
-__attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) _assert (const char *_Message, const char *_File, unsigned _Line);
-# 34 "../micropython/py/nlr.h" 2
-# 103 "../micropython/py/nlr.h"
-
-# 103 "../micropython/py/nlr.h"
-typedef struct _nlr_buf_t nlr_buf_t;
-struct _nlr_buf_t {
-
-
-
-
-    nlr_buf_t *prev;
-
-
-
-
-    void *ret_val;
-
-
-
-
-    void *regs[((10))];
-
-
-
-
-
-};
-
-typedef void (*nlr_jump_callback_fun_t)(void *ctx);
-
-typedef struct _nlr_jump_callback_node_t nlr_jump_callback_node_t;
-
-struct _nlr_jump_callback_node_t {
-    nlr_jump_callback_node_t *prev;
-    nlr_jump_callback_fun_t fun;
-};
-# 163 "../micropython/py/nlr.h"
-unsigned int nlr_push(nlr_buf_t *);
-
-
-unsigned int nlr_push_tail(nlr_buf_t *top);
-void nlr_pop(void);
-__attribute__((noreturn)) void nlr_jump(void *val);
-# 179 "../micropython/py/nlr.h"
-__attribute__((noreturn)) void nlr_jump_fail(void *val);
-# 204 "../micropython/py/nlr.h"
-void nlr_push_jump_callback(nlr_jump_callback_node_t *node, nlr_jump_callback_fun_t fun);
-
-
-
-void nlr_pop_jump_callback(
-# 208 "../micropython/py/nlr.h" 3 4
-                          _Bool 
-# 208 "../micropython/py/nlr.h"
-                               run_callback);
-
-
-void nlr_call_jump_callbacks(nlr_buf_t *nlr);
-# 35 "../micropython/py/mpstate.h" 2
-# 1 "../micropython/py/obj.h" 1
-# 29 "../micropython/py/obj.h"
-# 1 "C:/msys64/ucrt64/include/assert.h" 1 3
-# 30 "../micropython/py/obj.h" 2
-
-
-
+# 33 "../micropython/py/obj.h" 2
 # 1 "../micropython/py/qstr.h" 1
 # 39 "../micropython/py/qstr.h"
 enum {
@@ -4644,7 +4569,77 @@ _Bool
 mp_obj_t mp_seq_index_obj(const mp_obj_t *items, size_t len, size_t n_args, const mp_obj_t *args);
 mp_obj_t mp_seq_count_obj(const mp_obj_t *items, size_t len, mp_obj_t value);
 mp_obj_t mp_seq_extract_slice(size_t len, const mp_obj_t *seq, mp_bound_slice_t *indexes);
-# 36 "../micropython/py/mpstate.h" 2
+# 2 "modules/orb/led/led.c" 2
+# 1 "../micropython/py/runtime.h" 1
+# 29 "../micropython/py/runtime.h"
+# 1 "../micropython/py/mpstate.h" 1
+# 32 "../micropython/py/mpstate.h"
+# 1 "../micropython/py/mpthread.h" 1
+# 33 "../micropython/py/mpstate.h" 2
+
+# 1 "../micropython/py/nlr.h" 1
+# 32 "../micropython/py/nlr.h"
+# 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h" 1 3 4
+# 33 "../micropython/py/nlr.h" 2
+# 1 "C:/msys64/ucrt64/include/assert.h" 1 3
+# 34 "../micropython/py/nlr.h" 2
+# 103 "../micropython/py/nlr.h"
+typedef struct _nlr_buf_t nlr_buf_t;
+struct _nlr_buf_t {
+
+
+
+
+    nlr_buf_t *prev;
+
+
+
+
+    void *ret_val;
+
+
+
+
+    void *regs[((10))];
+
+
+
+
+
+};
+
+typedef void (*nlr_jump_callback_fun_t)(void *ctx);
+
+typedef struct _nlr_jump_callback_node_t nlr_jump_callback_node_t;
+
+struct _nlr_jump_callback_node_t {
+    nlr_jump_callback_node_t *prev;
+    nlr_jump_callback_fun_t fun;
+};
+# 163 "../micropython/py/nlr.h"
+unsigned int nlr_push(nlr_buf_t *);
+
+
+unsigned int nlr_push_tail(nlr_buf_t *top);
+void nlr_pop(void);
+__attribute__((noreturn)) void nlr_jump(void *val);
+# 179 "../micropython/py/nlr.h"
+__attribute__((noreturn)) void nlr_jump_fail(void *val);
+# 204 "../micropython/py/nlr.h"
+void nlr_push_jump_callback(nlr_jump_callback_node_t *node, nlr_jump_callback_fun_t fun);
+
+
+
+void nlr_pop_jump_callback(
+# 208 "../micropython/py/nlr.h" 3 4
+                          _Bool 
+# 208 "../micropython/py/nlr.h"
+                               run_callback);
+
+
+void nlr_call_jump_callbacks(nlr_buf_t *nlr);
+# 35 "../micropython/py/mpstate.h" 2
+
 # 1 "../micropython/py/objlist.h" 1
 # 31 "../micropython/py/objlist.h"
 typedef struct _mp_obj_list_t {
@@ -5061,63 +5056,64 @@ int mp_native_type_from_qstr(qstr qst);
 mp_uint_t mp_native_from_obj(mp_obj_t obj, mp_uint_t type);
 mp_obj_t mp_native_to_obj(mp_uint_t val, mp_uint_t type);
 # 3 "modules/orb/led/led.c" 2
-# 1 "../micropython/py/objstr.h" 1
-# 30 "../micropython/py/objstr.h"
-# 1 "../micropython/py/objarray.h" 1
-# 41 "../micropython/py/objarray.h"
-typedef struct _mp_obj_array_t {
-    mp_obj_base_t base;
-    size_t typecode : 8;
+# 1 "../micropython/py/mphal.h" 1
+# 33 "../micropython/py/mphal.h"
+# 1 "../micropython/ports/embed/port/mphalport.h" 1
+# 34 "../micropython/py/mphal.h" 2
+# 47 "../micropython/py/mphal.h"
+uintptr_t mp_hal_stdio_poll(uintptr_t poll_flags);
+
+
+
+int mp_hal_stdin_rx_chr(void);
+
+
+
+void mp_hal_stdout_tx_str(const char *str);
+
+
+
+mp_uint_t mp_hal_stdout_tx_strn(const char *str, size_t len);
+
+
+
+void mp_hal_stdout_tx_strn_cooked(const char *str, size_t len);
+
+
+
+void mp_hal_delay_ms(mp_uint_t ms);
+
+
+
+void mp_hal_delay_us(mp_uint_t us);
+
+
+
+mp_uint_t mp_hal_ticks_ms(void);
+
+
+
+mp_uint_t mp_hal_ticks_us(void);
+
+
+
+mp_uint_t mp_hal_ticks_cpu(void);
 
 
 
 
-
-
-    size_t free : (8 * sizeof(size_t) - 8);
-    size_t len;
-    void *items;
-} mp_obj_array_t;
-# 31 "../micropython/py/objstr.h" 2
-
-typedef struct _mp_obj_str_t {
-    mp_obj_base_t base;
-    size_t hash;
-
-    size_t len;
-    const byte *data;
-} mp_obj_str_t;
-# 87 "../micropython/py/objstr.h"
-mp_obj_t mp_obj_str_make_new(const mp_obj_type_t *type_in, size_t n_args, size_t n_kw, const mp_obj_t *args);
-void mp_str_print_json(const mp_print_t *print, const byte *str_data, size_t str_len);
-mp_obj_t mp_obj_str_format(size_t n_args, const mp_obj_t *args, mp_map_t *kwargs);
-mp_obj_t mp_obj_str_split(size_t n_args, const mp_obj_t *args);
-mp_obj_t mp_obj_new_str_copy(const mp_obj_type_t *type, const byte *data, size_t len);
-mp_obj_t mp_obj_new_str_of_type(const mp_obj_type_t *type, const byte *data, size_t len);
-
-mp_obj_t mp_obj_str_binary_op(mp_binary_op_t op, mp_obj_t lhs_in, mp_obj_t rhs_in);
-mp_int_t mp_obj_str_get_buffer(mp_obj_t self_in, mp_buffer_info_t *bufinfo, mp_uint_t flags);
-
-void mp_obj_str_set_data(mp_obj_str_t *str, const byte *data, size_t len);
-
-const byte *str_index_to_ptr(const mp_obj_type_t *type, const byte *self_data, size_t self_len,
-    mp_obj_t index, 
-# 100 "../micropython/py/objstr.h" 3 4
-                   _Bool 
-# 100 "../micropython/py/objstr.h"
-                        is_slice);
-const byte *find_subbytes(const byte *haystack, size_t hlen, const byte *needle, size_t nlen, int direction);
-
-
-
-mp_obj_t mp_obj_bytes_hex(size_t n_args, const mp_obj_t *args, const mp_obj_type_t *type);
-mp_obj_t mp_obj_bytes_fromhex(mp_obj_t type_in, mp_obj_t data);
-
-extern const mp_obj_dict_t mp_obj_str_locals_dict;
+uint64_t mp_hal_time_ns(void);
 # 4 "modules/orb/led/led.c" 2
+
 # 1 "modules/orb/led/led.h" 1
 extern const mp_obj_type_t orb_led_type;
-# 5 "modules/orb/led/led.c" 2
+# 6 "modules/orb/led/led.c" 2
+
+enum LEDS {
+    LED_POWER = 0,
+    LED_1 = 1,
+    LED_2 = 2,
+};
 
 
 
@@ -5132,12 +5128,6 @@ typedef struct _orb_led_obj_t {
 
 
 } orb_led_obj_t;
-
-enum LEDS {
-    LED_POWER = 0,
-    LED_1 = 1,
-    LED_2 = 2,
-};
 
 
 static mp_obj_t mp_orb_led_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *all_args) {
@@ -5158,11 +5148,11 @@ static mp_obj_t mp_orb_led_make_new(const mp_obj_type_t *type, size_t n_args, si
     if(led_id < 0 || led_id > 2){
         mp_raise_ValueError((mp_rom_error_text_t)"Invalid led id.");
     }
-# 54 "modules/orb/led/led.c"
+# 55 "modules/orb/led/led.c"
     return 
-# 54 "modules/orb/led/led.c" 3 4
+# 55 "modules/orb/led/led.c" 3 4
           ((void *)0)
-# 54 "modules/orb/led/led.c"
+# 55 "modules/orb/led/led.c"
               ;
 
 
@@ -5178,43 +5168,70 @@ static mp_obj_t orb_led_value(size_t n_args, const mp_obj_t *args) {
 
     orb_led_obj_t *self = ((void *)(args[0]));
 
-    if(valueLedWrapper(self->wrapper) == 10){
-        mp_raise_ValueError((mp_rom_error_text_t)"HI");
-    }
-    mp_arg_check_num(n_args, 0, 1, 2, 
-# 72 "modules/orb/led/led.c" 3 4
+    mp_arg_check_num(n_args, 0, 0, 1, 
+# 70 "modules/orb/led/led.c" 3 4
                                      1
-# 72 "modules/orb/led/led.c"
+# 70 "modules/orb/led/led.c"
                                          );
-# 83 "modules/orb/led/led.c"
+# 81 "modules/orb/led/led.c"
     return 
-# 83 "modules/orb/led/led.c" 3 4
+# 81 "modules/orb/led/led.c" 3 4
           ((void *)0)
-# 83 "modules/orb/led/led.c"
+# 81 "modules/orb/led/led.c"
               ;
 
 }
 
-static const mp_obj_fun_builtin_var_t orb_led_value_obj = {{&mp_type_fun_builtin_var}, ((uint32_t)((((uint32_t)(1)) << 17) | (((uint32_t)(2)) << 1) | ((
-# 87 "modules/orb/led/led.c" 3 4
+static const mp_obj_fun_builtin_var_t orb_led_value_obj = {{&mp_type_fun_builtin_var}, ((uint32_t)((((uint32_t)(0)) << 17) | (((uint32_t)(1)) << 1) | ((
+# 85 "modules/orb/led/led.c" 3 4
       0
-# 87 "modules/orb/led/led.c"
+# 85 "modules/orb/led/led.c"
       ) ? 1 : 0))), .fun.var = orb_led_value};
 
-void orb_led_finalizer(mp_obj_t obj) {
+static mp_obj_t orb_led_blink(size_t n_args, const mp_obj_t *pos_args, mp_map_t *kw_args) {
+    enum { ARG_interval, ARG_duration };
+
+
+    static const mp_arg_t allowed_args[] = {
+        { MP_QSTR_interval, MP_ARG_REQUIRED | MP_ARG_INT, {.u_int = 0} },
+        { MP_QSTR_duration, MP_ARG_REQUIRED | MP_ARG_INT, {.u_int = 0} },
+    };
+
+
+    mp_arg_val_t parsed_args[(sizeof(allowed_args) / sizeof((allowed_args)[0]))];
+    mp_arg_parse_all(n_args, pos_args, kw_args, (sizeof(allowed_args) / sizeof((allowed_args)[0])), allowed_args, parsed_args);
+
+
+    int interval = parsed_args[ARG_interval].u_int;
+    int duration = parsed_args[ARG_duration].u_int;
+
+
+    orb_led_obj_t *self = ((void *)(pos_args[0]));
+
+    return ((mp_obj_t)((((mp_uint_t)(interval)) << 1) | 1));
 
 
 
 
 
-
+    return 
+# 113 "modules/orb/led/led.c" 3 4
+          ((void *)0)
+# 113 "modules/orb/led/led.c"
+              ;
 
 }
+static const mp_obj_fun_builtin_var_t orb_led_blink_obj = {{&mp_type_fun_builtin_var}, ((uint32_t)((((uint32_t)(2)) << 17) | (((uint32_t)((0xffff))) << 1) | ((
+# 116 "modules/orb/led/led.c" 3 4
+      1
+# 116 "modules/orb/led/led.c"
+      ) ? 1 : 0))), .fun.kw = orb_led_blink};
 
 
 
 static const mp_rom_map_elem_t orb_led_local_dict_table[] = {
     { ((mp_obj_t)((((mp_uint_t)(MP_QSTR_value)) << 3) | 2)), (&orb_led_value_obj) },
+    { ((mp_obj_t)((((mp_uint_t)(MP_QSTR_blink)) << 3) | 2)), (&orb_led_blink_obj) },
 
     { ((mp_obj_t)((((mp_uint_t)(MP_QSTR_LED_POWER)) << 3) | 2)), ((mp_obj_t)((((mp_uint_t)(LED_POWER)) << 1) | 1)) },
     { ((mp_obj_t)((((mp_uint_t)(MP_QSTR_LED_1)) << 3) | 2)), ((mp_obj_t)((((mp_uint_t)(LED_1)) << 1) | 1)) },
@@ -5223,8 +5240,7 @@ static const mp_rom_map_elem_t orb_led_local_dict_table[] = {
 static const mp_obj_dict_t orb_led_local = { .base = {&mp_type_dict}, .map = { .all_keys_are_qstrs = 1, .is_fixed = 1, .is_ordered = 1, .used = (sizeof(orb_led_local_dict_table) / sizeof((orb_led_local_dict_table)[0])), .alloc = (sizeof(orb_led_local_dict_table) / sizeof((orb_led_local_dict_table)[0])), .table = (mp_map_elem_t *)(mp_rom_map_elem_t *)orb_led_local_dict_table, }, };
 
 
- const mp_obj_type_t orb_led_type = { .base = { &mp_type_type }, .flags = (0x0000), .name = MP_QSTR_led, .slot_index_make_new = 1, .slot_index_locals_dict = 2, .slot_index_deinit = 3, .slots = { mp_orb_led_make_new, &orb_led_local, orb_led_deinit, } }
-
+ const mp_obj_type_t orb_led_type = { .base = { &mp_type_type }, .flags = (0x0000), .name = MP_QSTR_led, .slot_index_make_new = 1, .slot_index_locals_dict = 2, .slots = { mp_orb_led_make_new, &orb_led_local, } }
 
 
 
