@@ -15,6 +15,7 @@
 					<Add option="-Os" />
 					<Add option="-m64" />
 					<Add option="-DORB_FIRMWARE=1" />
+					<Add option="-DEMB_SYS_LIB=0" />
 					<Add directory="ORB-Python" />
 					<Add directory="ORB-Python/micropython_embed" />
 					<Add directory="ORB-Python/micropython_embed/port" />
@@ -26,9 +27,6 @@
 					<Add option="-s" />
 					<Add option="-m64" />
 				</Linker>
-				<Environment>
-					<Variable name="ORB_FIRMWARE" value="1" />
-				</Environment>
 			</Target>
 		</Build>
 		<Compiler>
@@ -485,6 +483,8 @@
 		<Unit filename="ORB-Python/modules_cpp/orb/led/LedWrapper.cpp" />
 		<Unit filename="ORB-Python/modules_cpp/orb/led/LedWrapper.h" />
 		<Unit filename="ORB-Python/modules_cpp/orb/led/LedWrapperStruct.h" />
+		<Unit filename="ORB-Python/pythonVM.cpp" />
+		<Unit filename="ORB-Python/pythonVM.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<debugger>

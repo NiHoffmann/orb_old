@@ -1,6 +1,7 @@
 //here i do the adding functions to led stuff
 #if ORB_FIRMWARE == 1 && EMB_SYS_LIB == 1
 #include "lib.h"
+#include "orb/led/ledenums.h"
 extern Digital ledUsr1;
 extern Digital ledUsr2;
 extern Digital ledPwr;
@@ -15,15 +16,15 @@ public:
     LedWrapperStruct(int ledId){
         #if ORB_FIRMWARE == 1 && EMB_SYS_LIB == 1
             switch(ledId){
-            case 0:
+            case LED_POWER:
                 taskSelf = &pwrIndicator;
                 self = &ledPwr;
                 break;
-            case 1:
+            case LED_1:
                 taskSelf = &indUsr1;
                 self = &ledUsr1;
                 break;
-            case 2:
+            case LED_2:
                 taskSelf = &indUsr2;
                 self = &ledUsr2;
                 break;

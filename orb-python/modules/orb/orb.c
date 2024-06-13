@@ -1,6 +1,8 @@
 // Include MicroPython API.
 #include "py/runtime.h"
 #include "led/led.h"
+#include "port/port.h"
+#include "motor/motor.h"
 
 static mp_obj_t orb___init__(void) {
     if (!MP_STATE_VM(orb_initialised)) {
@@ -21,7 +23,9 @@ static const mp_rom_map_elem_t orb_globals_table[] = {
     { MP_ROM_QSTR(MP_QSTR___name__), MP_ROM_QSTR(MP_QSTR_orb) },
     { MP_ROM_QSTR(MP_QSTR___init__), MP_ROM_PTR(&orb___init___obj) },
     //register orb.led class, this makes led callable and you can instantiate a led variable
-    { MP_ROM_QSTR(MP_QSTR_led), MP_ROM_PTR(&orb_led_type) },
+    { MP_ROM_QSTR(MP_QSTR_Led), MP_ROM_PTR(&orb_led_type) },
+    { MP_ROM_QSTR(MP_QSTR_Port), MP_ROM_PTR(&orb_port_type) },
+    { MP_ROM_QSTR(MP_QSTR_Motor), MP_ROM_PTR(&orb_motor_type) },
 };
 static MP_DEFINE_CONST_DICT(orb_globals, orb_globals_table);
 

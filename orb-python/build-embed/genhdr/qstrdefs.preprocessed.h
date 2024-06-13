@@ -952,13 +952,29 @@ Q(LED_2)
 
 Q(LED_POWER)
 
+Q(Led)
+
+Q(Led)
+
 Q(LookupError)
 
 Q(LookupError)
+
+Q(M1)
+
+Q(M2)
+
+Q(M3)
+
+Q(M4)
 
 Q(MemoryError)
 
 Q(MemoryError)
+
+Q(Motor)
+
+Q(Motor)
 
 Q(NameError)
 
@@ -978,9 +994,21 @@ Q(OverflowError)
 
 Q(OverflowError)
 
+Q(Port)
+
+Q(Port)
+
 Q(RuntimeError)
 
 Q(RuntimeError)
+
+Q(S1)
+
+Q(S2)
+
+Q(S3)
+
+Q(S4)
 
 Q(StopIteration)
 
@@ -1366,10 +1394,6 @@ Q(keys)
 
 Q(keys)
 
-Q(led)
-
-Q(led)
-
 Q(len)
 
 Q(list)
@@ -1419,6 +1443,8 @@ Q(pop)
 Q(pop)
 
 Q(popitem)
+
+Q(port)
 
 Q(pow)
 

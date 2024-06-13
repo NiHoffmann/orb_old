@@ -3,12 +3,7 @@
 #include "py/mphal.h"
 
 #include "led.h"
-
-enum LEDS {
-    LED_POWER = 0,
-    LED_1     = 1,
-    LED_2     = 2,
-};
+#include "ledenums.h"
 
 #if ORB_FIRMWARE == 1
     #include "led/LedWrapper.h"
@@ -26,7 +21,7 @@ typedef struct _orb_led_obj_t {
 
 //when creating a pin instance this is called
 static mp_obj_t mp_orb_led_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *all_args) {
-    //allowed args, just id´atm
+    //allowed args, just idï¿½atm
     enum { ARG_id, ARG_mode };
     static const mp_arg_t allowed_args[] = {
         { MP_QSTR_id, MP_ARG_OBJ, {.u_obj = MP_OBJ_NEW_SMALL_INT(-1) } },
@@ -40,17 +35,17 @@ static mp_obj_t mp_orb_led_make_new(const mp_obj_type_t *type, size_t n_args, si
     //cast argument to id value
     int led_id =  mp_obj_get_int(args[ARG_id].u_obj);
 
-    if(led_id < 0 || led_id > 2){
+    if(led_id < 0 || led_id > LED_2){
         mp_raise_ValueError(MP_ERROR_TEXT("Invalid led id."));
     }
 #if ORB_FIRMWARE == 1
     //get pointer from led const array (shared objects for user leds)
-    orb_led_obj_t *my_led_ptr =  m_new_obj(orb_led_obj_t);
-    my_led_ptr->base.type = type;
-    my_led_ptr->wrapper = createLedWrapper(led_id);
+    orb_led_obj_t *self =  m_new_obj(orb_led_obj_t);
+    self->base.type = type;
+    self->wrapper = createLedWrapper(led_id);
 
     //TODO MAKE THIS A POINTER TO AN LED OBJECT WITH LED ID
-    return MP_OBJ_FROM_PTR(my_led_ptr);
+    return MP_OBJ_FROM_PTR(self);
 #else
     return mp_const_none;
 #endif
@@ -124,7 +119,7 @@ static MP_DEFINE_CONST_DICT(orb_led_local, orb_led_local_dict_table);
 //this defines our led class, use this define to add to orb module table
  MP_DEFINE_CONST_OBJ_TYPE(
     orb_led_type,
-    MP_QSTR_led,
+    MP_QSTR_Led,
     MP_TYPE_FLAG_NONE,
     make_new, mp_orb_led_make_new,
     locals_dict, &orb_led_local
