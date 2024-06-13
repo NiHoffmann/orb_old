@@ -7,6 +7,6 @@ MICROPYTHON_TOP = ../micropython
 
 # Add C modules.
 USER_C_MODULES = modules
-
+CFLAGS += -Imodules
 # Include the main makefile fragment to build the MicroPython component.
 include $(MICROPYTHON_TOP)/ports/embed/embed.mk

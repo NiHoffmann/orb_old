@@ -477,12 +477,25 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="ORB-Python/modules/orb/led/led.h" />
+		<Unit filename="ORB-Python/modules/orb/led/ledenums.h" />
+		<Unit filename="ORB-Python/modules/orb/motor/motor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ORB-Python/modules/orb/motor/motor.h" />
 		<Unit filename="ORB-Python/modules/orb/orb.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="ORB-Python/modules/orb/port/port.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ORB-Python/modules/orb/port/port.h" />
+		<Unit filename="ORB-Python/modules/orb/port/portenums.h" />
 		<Unit filename="ORB-Python/modules_cpp/orb/led/LedWrapper.cpp" />
 		<Unit filename="ORB-Python/modules_cpp/orb/led/LedWrapper.h" />
 		<Unit filename="ORB-Python/modules_cpp/orb/led/LedWrapperStruct.h" />
+		<Unit filename="ORB-Python/modules_cpp/orb/motor/MotorWrapper.cpp" />
+		<Unit filename="ORB-Python/modules_cpp/orb/motor/MotorWrapper.h" />
+		<Unit filename="ORB-Python/modules_cpp/orb/motor/MotorWrapperStruct.h" />
 		<Unit filename="ORB-Python/pythonVM.cpp" />
 		<Unit filename="ORB-Python/pythonVM.h" />
 		<Unit filename="main.cpp" />

@@ -2515,15 +2515,18 @@ extern const mp_obj_type_t orb_led_type;
 # 1 "modules/orb/port/port.h" 1
 extern const mp_obj_type_t orb_port_type;
 # 5 "modules/orb/orb.c" 2
+# 1 "modules/orb/motor/motor.h" 1
+extern const mp_obj_type_t orb_motor_type;
+# 6 "modules/orb/orb.c" 2
 
 static mp_obj_t orb___init__(void) {
     if (!(mp_state_ctx.vm.orb_initialised)) {
 
 
         (mp_state_ctx.vm.orb_initialised) = 
-# 10 "modules/orb/orb.c" 3 4
+# 11 "modules/orb/orb.c" 3 4
                                       1
-# 10 "modules/orb/orb.c"
+# 11 "modules/orb/orb.c"
                                           ;
     }
     return ((mp_obj_t)(((0) << 3) | 6));
@@ -5151,7 +5154,7 @@ static mp_obj_t mp_orb_led_make_new(const mp_obj_type_t *type, size_t n_args, si
 
     int led_id = mp_obj_get_int(args[ARG_id].u_obj);
 
-    if(led_id < 0 || led_id > 2){
+    if(led_id < 0 || led_id > LED_2){
         mp_raise_ValueError((mp_rom_error_text_t)"Invalid led id.");
     }
 # 50 "modules/orb/led/led.c"
@@ -7794,17 +7797,17 @@ extern const mp_obj_type_t orb_port_type;
 # 6 "modules/orb/port/port.c" 2
 # 1 "modules/orb/port/portenums.h" 1
 enum MotorPorts{
-    PORT_M1 = 0,
-    PORT_M2 = 1,
-    PORT_M3 = 2,
-    PORT_M4 = 3,
+    PORT_M1,
+    PORT_M2,
+    PORT_M3,
+    PORT_M4,
 };
 
 enum SensorPorts{
-    PORT_S1 = 4,
-    PORT_S2 = 5,
-    PORT_S3 = 6,
-    PORT_S4 = 7,
+    PORT_S1,
+    PORT_S2,
+    PORT_S3,
+    PORT_S4,
 };
 # 7 "modules/orb/port/port.c" 2
 
@@ -10390,11 +10393,33 @@ uint64_t mp_hal_time_ns(void);
 # 1 "modules/orb/motor/motor.h" 1
 extern const mp_obj_type_t orb_motor_type;
 # 6 "modules/orb/motor/motor.c" 2
+# 1 "modules/orb/port/portenums.h" 1
+enum MotorPorts{
+    PORT_M1,
+    PORT_M2,
+    PORT_M3,
+    PORT_M4,
+};
+
+enum SensorPorts{
+    PORT_S1,
+    PORT_S2,
+    PORT_S3,
+    PORT_S4,
+};
+# 7 "modules/orb/motor/motor.c" 2
+
+
+
+
 
 const mp_obj_type_t orb_motor_type;
 
 typedef struct _orb_motor_obj_t {
     mp_obj_base_t base;
+
+
+
 } orb_motor_obj_t;
 
 static mp_obj_t mp_orb_motor_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *all_args) {
@@ -10411,14 +10436,42 @@ static mp_obj_t mp_orb_motor_make_new(const mp_obj_type_t *type, size_t n_args, 
 
     int motor_id = mp_obj_get_int(args[ARG_port].u_obj);
 
+    if(motor_id < 0 || motor_id > PORT_M4){
+        mp_raise_ValueError((mp_rom_error_text_t)"Invalid Motor Port.");
+    }
 
     orb_motor_obj_t *self = (((orb_motor_obj_t *)(m_malloc(sizeof(orb_motor_obj_t) * (1)))));
     self->base.type = type;
 
+
+
+
+
     return ((mp_obj_t)(self));
 }
 
+static mp_obj_t orb_motor_free(mp_obj_t self_in) {
+    orb_motor_obj_t *self = ((void *)(self_in));
+
+
+
+    return ((mp_obj_t)(self));
+}
+static const mp_obj_fun_builtin_fixed_t orb_motor_free_obj = {{&mp_type_fun_builtin_1}, .fun._1 = orb_motor_free};
+
+static mp_obj_t orb_motor_brake(mp_obj_t self_in) {
+    orb_motor_obj_t *self = ((void *)(self_in));
+
+
+
+    return ((mp_obj_t)(self));
+}
+static const mp_obj_fun_builtin_fixed_t orb_motor_brake_obj = {{&mp_type_fun_builtin_1}, .fun._1 = orb_motor_brake};
+
 static const mp_rom_map_elem_t orb_motor_local_dict_table[] = {
+    { ((mp_obj_t)((((mp_uint_t)(MP_QSTR_free)) << 3) | 2)), (&orb_motor_free_obj) },
+    { ((mp_obj_t)((((mp_uint_t)(MP_QSTR_brake)) << 3) | 2)), (&orb_motor_brake_obj) },
+
 
 };
 

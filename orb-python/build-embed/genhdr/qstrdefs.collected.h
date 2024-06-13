@@ -330,6 +330,8 @@ Q(bool)
 
 Q(bound_method)
 
+Q(brake)
+
 Q(builtins)
 
 Q(builtins)
@@ -407,6 +409,8 @@ Q(float)
 Q(float)
 
 Q(format)
+
+Q(free)
 
 Q(from_bytes)
 
