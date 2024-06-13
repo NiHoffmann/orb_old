@@ -19,7 +19,9 @@ void stopProgram();
 
 // This is example 2 script, which will be compiled and executed.
 static const char *example =
-    "from orb import Led\n"
-    "b = Led(0)\n"
-    "print(b.value(Led.PowerLed))\n"
+    "from orb import Port\n"
+    "from orb import Motor\n"
+    "a = Motor(Port.M1)\n"
+    "a.dc()"
+    ;
     ;

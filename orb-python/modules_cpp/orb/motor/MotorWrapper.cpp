@@ -22,6 +22,9 @@ extern "C" void motorBrake(struct MotorWrapper* wrapper) {
     wrapper->instance->brake();
 }
 
+extern "C" void motorDc(struct MotorWrapper* wrapper, int speed) {
+    wrapper->instance->dc(speed);
+}
 // Function to destroy an instance of MotorWrapper
 extern "C" void destroyMotorWrapper(struct MotorWrapper* wrapper) {
     delete wrapper->instance;

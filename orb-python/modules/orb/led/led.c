@@ -99,7 +99,7 @@ static mp_obj_t orb_led_blink(size_t n_args, const mp_obj_t *pos_args, mp_map_t 
 #if ORB_FIRMWARE == 1
     blinkLed(self->wrapper, interval, duration);
 #endif
-    return mp_const_none;
+    return MP_OBJ_FROM_PTR(self);
 }
 static MP_DEFINE_CONST_FUN_OBJ_KW(orb_led_blink_obj, 0, orb_led_blink);
 

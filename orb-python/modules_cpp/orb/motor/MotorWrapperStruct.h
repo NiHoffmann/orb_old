@@ -1,8 +1,11 @@
 //here i do the adding functions to led stuff
 #if ORB_FIRMWARE == 1 && EMB_SYS_LIB == 1
     #include "lib.h"
+    #include "MotorTask.h"
     #include "orb/port/portenums.h"
-    //extern MotorTask mTask[];
+    #include "Properties.h"
+
+    extern MotorTask mTask[];
     extern DigitalIndicator pwrIndicator;
 #endif
 
@@ -15,7 +18,8 @@ public:
             case PORT_M2:
             case PORT_M3:
             case PORT_M4:
-                //taskSelf = &mTask[MotorId];
+                taskSelf = &mTask[MotorId];
+                (*taskSelf).config(10,10,10,10);
             default:
                 return;
                 break;
@@ -23,21 +27,26 @@ public:
         #endif
     }
 
+    void dc(int speed){
+    #if ORB_FIRMWARE == 1 && EMB_SYS_LIB == 1
+        (*taskSelf).set(cPropToORB::Data::Motor::POWER_MODE,speed,0);
+    #endif // ORB_FIRMWARE
+    }
+
     void brake(){
     #if ORB_FIRMWARE == 1 && EMB_SYS_LIB == 1
-
+        (*taskSelf).set(cPropToORB::Data::Motor::BRAKE_MODE,0,0);
     #endif // ORB_FIRMWARE
     }
 
     void free() {
     #if ORB_FIRMWARE == 1 && EMB_SYS_LIB == 1
-        pwrIndicator.setBrightness( 20 );
-        pwrIndicator.blink(1000, 1000);
+        (*taskSelf).set(Motor::FREE,0,0);
     #endif // ORB_FIRMWARE
     }
 
 private:
     #if ORB_FIRMWARE == 1 && EMB_SYS_LIB == 1
-    //MotorTask* taskSelf;
+    MotorTask* taskSelf;
     #endif
 };

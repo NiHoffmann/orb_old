@@ -7,6 +7,7 @@ struct MotorWrapper* createMotorWrapper(int MotorId);
 
 void motorFree(struct MotorWrapper* wrapper);
 void motorBrake(struct MotorWrapper* wrapper);
+void motorDc(struct MotorWrapper* wrapper, int speed);
 
 // Function to destroy an instance of MotorWrapper
 void destroyMotorWrapper(struct MotorWrapper* wrapper);
