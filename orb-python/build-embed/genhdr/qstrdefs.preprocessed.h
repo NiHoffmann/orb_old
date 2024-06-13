@@ -1268,8 +1268,6 @@ Q(count)
 
 Q(count)
 
-Q(dc)
-
 Q(dict)
 
 Q(dict)
@@ -1483,6 +1481,8 @@ Q(round)
 Q(rsplit)
 
 Q(rstrip)
+
+Q(run)
 
 Q(send)
 

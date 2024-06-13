@@ -65,23 +65,22 @@ static mp_obj_t orb_motor_brake(mp_obj_t self_in) {
 static MP_DEFINE_CONST_FUN_OBJ_1(orb_motor_brake_obj, orb_motor_brake);
 
 // pin.value function callback
-static mp_obj_t orb_motor_dc(size_t n_args, const mp_obj_t *args) {
+static mp_obj_t orb_motor_run(size_t n_args, const mp_obj_t *args) {
     mp_arg_check_num(n_args, 0, 2, 2, true);
     orb_motor_obj_t *self = MP_OBJ_TO_PTR(args[0]);
-
 #if ORB_FIRMWARE == 1
     int value = mp_obj_get_int(args[1]);
-    motorDc(self->wrapper, value);
+    motorRun(self->wrapper, value);
 #endif
 
     return MP_OBJ_FROM_PTR(self);
 }
-static MP_DEFINE_CONST_FUN_OBJ_VAR_BETWEEN(orb_motor_dc_obj, 2, 2, orb_motor_dc);
+static MP_DEFINE_CONST_FUN_OBJ_VAR_BETWEEN(orb_motor_run_obj, 2, 2, orb_motor_run);
 
 static const mp_rom_map_elem_t orb_motor_local_dict_table[] = {
     { MP_ROM_QSTR(MP_QSTR_free), MP_ROM_PTR(&orb_motor_free_obj) },
     { MP_ROM_QSTR(MP_QSTR_brake), MP_ROM_PTR(&orb_motor_brake_obj) },
-    { MP_ROM_QSTR(MP_QSTR_dc), MP_ROM_PTR(&orb_motor_dc_obj) },
+    { MP_ROM_QSTR(MP_QSTR_run), MP_ROM_PTR(&orb_motor_run_obj) },
     //{ MP_ROM_QSTR(MP_QSTR_move_to), MP_ROM_PTR(&orb_motor_move_to_obj) },
 };
 

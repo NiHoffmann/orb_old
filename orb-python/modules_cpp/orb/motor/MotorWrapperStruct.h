@@ -27,21 +27,24 @@ public:
         #endif
     }
 
-    void dc(int speed){
+    void run(int speed){
     #if ORB_FIRMWARE == 1 && EMB_SYS_LIB == 1
-        (*taskSelf).set(cPropToORB::Data::Motor::POWER_MODE,speed,0);
+        if(taskSelf != NULL)
+            (*taskSelf).set(cPropToORB::Data::Motor::SPEED_MODE,speed,0);
     #endif // ORB_FIRMWARE
     }
 
     void brake(){
     #if ORB_FIRMWARE == 1 && EMB_SYS_LIB == 1
-        (*taskSelf).set(cPropToORB::Data::Motor::BRAKE_MODE,0,0);
+        if(taskSelf != NULL)
+            (*taskSelf).set(cPropToORB::Data::Motor::BRAKE_MODE,0,0);
     #endif // ORB_FIRMWARE
     }
 
     void free() {
     #if ORB_FIRMWARE == 1 && EMB_SYS_LIB == 1
-        (*taskSelf).set(Motor::FREE,0,0);
+        if(taskSelf != NULL)
+            (*taskSelf).set(Motor::FREE,0,0);
     #endif // ORB_FIRMWARE
     }
 

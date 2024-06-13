@@ -10469,8 +10469,8 @@ static mp_obj_t orb_motor_brake(mp_obj_t self_in) {
 static const mp_obj_fun_builtin_fixed_t orb_motor_brake_obj = {{&mp_type_fun_builtin_1}, .fun._1 = orb_motor_brake};
 
 
-static mp_obj_t orb_motor_dc(size_t n_args, const mp_obj_t *args) {
-    mp_arg_check_num(n_args, 0, 1, 1, 
+static mp_obj_t orb_motor_run(size_t n_args, const mp_obj_t *args) {
+    mp_arg_check_num(n_args, 0, 2, 2, 
 # 69 "modules/orb/motor/motor.c" 3 4
                                      1
 # 69 "modules/orb/motor/motor.c"
@@ -10481,19 +10481,18 @@ static mp_obj_t orb_motor_dc(size_t n_args, const mp_obj_t *args) {
 
 
 
-
     return ((mp_obj_t)(self));
 }
-static const mp_obj_fun_builtin_var_t orb_motor_dc_obj = {{&mp_type_fun_builtin_var}, ((uint32_t)((((uint32_t)(1)) << 17) | (((uint32_t)(1)) << 1) | ((
-# 79 "modules/orb/motor/motor.c" 3 4
+static const mp_obj_fun_builtin_var_t orb_motor_run_obj = {{&mp_type_fun_builtin_var}, ((uint32_t)((((uint32_t)(2)) << 17) | (((uint32_t)(2)) << 1) | ((
+# 78 "modules/orb/motor/motor.c" 3 4
       0
-# 79 "modules/orb/motor/motor.c"
-      ) ? 1 : 0))), .fun.var = orb_motor_dc};
+# 78 "modules/orb/motor/motor.c"
+      ) ? 1 : 0))), .fun.var = orb_motor_run};
 
 static const mp_rom_map_elem_t orb_motor_local_dict_table[] = {
     { ((mp_obj_t)((((mp_uint_t)(MP_QSTR_free)) << 3) | 2)), (&orb_motor_free_obj) },
     { ((mp_obj_t)((((mp_uint_t)(MP_QSTR_brake)) << 3) | 2)), (&orb_motor_brake_obj) },
-    { ((mp_obj_t)((((mp_uint_t)(MP_QSTR_dc)) << 3) | 2)), (&orb_motor_dc_obj) },
+    { ((mp_obj_t)((((mp_uint_t)(MP_QSTR_run)) << 3) | 2)), (&orb_motor_run_obj) },
 
 };
 

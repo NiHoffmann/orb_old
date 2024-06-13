@@ -22,6 +22,6 @@ static const char *example =
     "from orb import Port\n"
     "from orb import Motor\n"
     "a = Motor(Port.M1)\n"
-    "a.dc()"
+    "a.dc(10)"
     ;
     ;
