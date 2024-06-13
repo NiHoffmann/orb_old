@@ -11,6 +11,7 @@ int getLedValue(struct LedWrapper* wrapper);
 void setLedValue(struct LedWrapper* wrapper, int value);
 
 void blinkLed(struct LedWrapper* wrapper, int interval, int duration);
+
 // Function to destroy an instance of LedWrapper
-void destroyLedWrapper(struct LedWrapper* wrapper);
+void collect(struct LedWrapper* wrapper);
 #endif

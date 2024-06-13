@@ -41,13 +41,6 @@ public:
     #endif // ORB_FIRMWARE
     }
 
-    void free() {
-    #if ORB_FIRMWARE == 1 && EMB_SYS_LIB == 1
-        if(taskSelf != NULL)
-            (*taskSelf).set(Motor::FREE,0,0);
-    #endif // ORB_FIRMWARE
-    }
-
 private:
     #if ORB_FIRMWARE == 1 && EMB_SYS_LIB == 1
     MotorTask* taskSelf;

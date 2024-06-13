@@ -3,6 +3,8 @@
 #include "py/obj.h"
 #include "py/mphal.h"
 #include "py/runtime.h"
+#include "py/obj.h"
+#include "py/mphal.h"
 
 extern "C"{
     #include <port/micropython_embed.h>
@@ -22,6 +24,6 @@ static const char *example =
     "from orb import Port\n"
     "from orb import Motor\n"
     "a = Motor(Port.M1)\n"
-    "a.dc(10)"
-    ;
+    "a.run(10)\n"
+    "b = Motor(Port.M2)\n"
     ;
