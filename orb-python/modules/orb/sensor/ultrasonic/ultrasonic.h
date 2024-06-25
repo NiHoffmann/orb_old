@@ -1,0 +1,1 @@
+extern const mp_obj_type_t orb_sensor_ultrasonic_type;

@@ -16,11 +16,16 @@ extern const struct _mp_obj_module_t orb_module;
 #undef MODULE_DEF_ORB
 #define MODULE_DEF_ORB { MP_ROM_QSTR(MP_QSTR_orb), MP_ROM_PTR(&orb_module) },
 
+extern const struct _mp_obj_module_t orb_module_sensor;
+#undef MODULE_DEF_ORB_DOT_SENSOR
+#define MODULE_DEF_ORB_DOT_SENSOR { MP_ROM_QSTR(MP_QSTR_orb_dot_sensor), MP_ROM_PTR(&orb_module_sensor) },
+
 
 #define MICROPY_REGISTERED_MODULES \
     MODULE_DEF_BUILTINS \
     MODULE_DEF_GC \
     MODULE_DEF_ORB \
+    MODULE_DEF_ORB_DOT_SENSOR \
     MODULE_DEF___MAIN__ \
 // MICROPY_REGISTERED_MODULES
 

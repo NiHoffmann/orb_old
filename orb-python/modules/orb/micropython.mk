@@ -3,5 +3,4 @@ SRC_USERMOD_C += $(ORB_MOD_DIR)/orb.c
 SRC_USERMOD_C += $(ORB_MOD_DIR)/led/led.c
 SRC_USERMOD_C += $(ORB_MOD_DIR)/port/port.c
 SRC_USERMOD_C += $(ORB_MOD_DIR)/motor/motor.c
-
-
+SRC_USERMOD_C += $(ORB_MOD_DIR)/sensor/sensor.c

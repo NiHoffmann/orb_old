@@ -892,6 +892,7 @@ Q(<string>)
 Q(<stdin>)
 Q(utf-8)
 # 74 "<stdin>"
+Q(orb.sensor)
 Q(ArithmeticError)
 
 Q(ArithmeticError)
@@ -954,8 +955,6 @@ Q(LED_POWER)
 
 Q(Led)
 
-Q(Led)
-
 Q(LookupError)
 
 Q(LookupError)
@@ -971,8 +970,6 @@ Q(M4)
 Q(MemoryError)
 
 Q(MemoryError)
-
-Q(Motor)
 
 Q(Motor)
 
@@ -993,8 +990,6 @@ Q(OSError)
 Q(OverflowError)
 
 Q(OverflowError)
-
-Q(Port)
 
 Q(Port)
 
@@ -1117,6 +1112,8 @@ Q(__main__)
 Q(__main__)
 
 Q(__module__)
+
+Q(__name__)
 
 Q(__name__)
 
@@ -1304,8 +1301,6 @@ Q(float)
 
 Q(format)
 
-Q(free)
-
 Q(from_bytes)
 
 Q(function)
@@ -1440,6 +1435,10 @@ Q(orb)
 
 Q(orb)
 
+Q(orb_dot_sensor)
+
+Q(orb_dot_sensor)
+
 Q(ord)
 
 Q(pop)
@@ -1487,6 +1486,8 @@ Q(run)
 Q(send)
 
 Q(send)
+
+Q(sensor)
 
 Q(sep)
 

@@ -1,7 +1,5 @@
 Q(__name__)
 Q(orb)
 Q(__init__)
-Q(Led)
-Q(Port)
-Q(Motor)
+Q(sensor)
 Q(orb)
