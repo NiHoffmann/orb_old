@@ -1,1 +1,3 @@
-MP_REGISTER_MODULE(MP_QSTR_orb, orb_module);
+MP_REGISTER_MODULE(MP_QSTR_orb_dot_constants, orb_module_constants);
+MP_REGISTER_MODULE(MP_QSTR_orb_dot_motors, orb_module_motors);
+MP_REGISTER_MODULE(MP_QSTR_orb_dot_devices, orb_module_devices);

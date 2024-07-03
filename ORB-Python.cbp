@@ -490,6 +490,10 @@
 		</Unit>
 		<Unit filename="ORB-Python/modules/orb/port/port.h" />
 		<Unit filename="ORB-Python/modules/orb/port/portenums.h" />
+		<Unit filename="ORB-Python/modules/orb/sensor/sensor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ORB-Python/modules/orb/sensor/sensor.h" />
 		<Unit filename="ORB-Python/modules_cpp/orb/led/LedWrapper.cpp" />
 		<Unit filename="ORB-Python/modules_cpp/orb/led/LedWrapper.h" />
 		<Unit filename="ORB-Python/modules_cpp/orb/led/LedWrapperStruct.h" />

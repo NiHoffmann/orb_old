@@ -1,5 +1,3 @@
-Q(__name__)
-Q(orb)
-Q(__init__)
-Q(sensor)
-Q(orb)
+Q(orb_dot_constants)
+Q(orb_dot_motors)
+Q(orb_dot_devices)

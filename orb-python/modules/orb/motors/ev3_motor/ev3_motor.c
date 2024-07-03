@@ -2,24 +2,24 @@
 #include "py/runtime.h"
 #include "py/mphal.h"
 
-#include "orb/motor/motor.h"
-#include "orb/port/portenums.h"
+#include "ev3_motor.h"
+#include "orb/constants/port/portenums.h"
 
 #if ORB_FIRMWARE == 1
     #include "motor/MotorWrapper.h"
 #endif // ORB_FIRMWARE
 
-const mp_obj_type_t orb_motor_type;
+const mp_obj_type_t orb_ev3_motor_type;
 
-typedef struct _orb_motor_obj_t {
+typedef struct _orb_ev3_motor_obj_t {
     mp_obj_base_t base;
 #if ORB_FIRMWARE == 1
     struct MotorWrapper* wrapper;
 #endif
-} orb_motor_obj_t;
+} orb_ev3_motor_obj_t;
 
 
-static mp_obj_t mp_orb_motor_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *all_args) {
+static mp_obj_t mp_orb_ev3_motor_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *all_args) {
     //allowed args, just id�atm
     enum { ARG_port };
     static const mp_arg_t allowed_args[] = {
@@ -37,7 +37,7 @@ static mp_obj_t mp_orb_motor_make_new(const mp_obj_type_t *type, size_t n_args, 
         mp_raise_ValueError(MP_ERROR_TEXT("Invalid Motor Port."));
     }
 
-    orb_motor_obj_t *self =  m_new_obj(orb_motor_obj_t);
+    orb_ev3_motor_obj_t *self =  m_new_obj(orb_ev3_motor_obj_t);
     self->base.type = type;
 
 #if ORB_FIRMWARE == 1
@@ -47,19 +47,19 @@ static mp_obj_t mp_orb_motor_make_new(const mp_obj_type_t *type, size_t n_args, 
     return MP_OBJ_FROM_PTR(self);
 }
 
-static mp_obj_t orb_motor_brake(mp_obj_t self_in) {
-    orb_motor_obj_t *self = MP_OBJ_TO_PTR(self_in);
+static mp_obj_t orb_ev3_motor_brake(mp_obj_t self_in) {
+    orb_ev3_motor_obj_t *self = MP_OBJ_TO_PTR(self_in);
 #if ORB_FIRMWARE == 1
     motorBrake(self->wrapper);
 #endif
     return MP_OBJ_FROM_PTR(self);
 }
-static MP_DEFINE_CONST_FUN_OBJ_1(orb_motor_brake_obj, orb_motor_brake);
+static MP_DEFINE_CONST_FUN_OBJ_1(orb_ev3_motor_brake_obj, orb_ev3_motor_brake);
 
 // pin.value function callback
-static mp_obj_t orb_motor_run(size_t n_args, const mp_obj_t *args) {
+static mp_obj_t orb_ev3_motor_run(size_t n_args, const mp_obj_t *args) {
     mp_arg_check_num(n_args, 0, 2, 2, true);
-    orb_motor_obj_t *self = MP_OBJ_TO_PTR(args[0]);
+    orb_ev3_motor_obj_t *self = MP_OBJ_TO_PTR(args[0]);
 #if ORB_FIRMWARE == 1
     int value = mp_obj_get_int(args[1]);
     motorRun(self->wrapper, value);
@@ -67,20 +67,20 @@ static mp_obj_t orb_motor_run(size_t n_args, const mp_obj_t *args) {
 
     return MP_OBJ_FROM_PTR(self);
 }
-static MP_DEFINE_CONST_FUN_OBJ_VAR_BETWEEN(orb_motor_run_obj, 2, 2, orb_motor_run);
+static MP_DEFINE_CONST_FUN_OBJ_VAR_BETWEEN(orb_ev3_motor_run_obj, 2, 2, orb_ev3_motor_run);
 
-static const mp_rom_map_elem_t orb_motor_local_dict_table[] = {
-    { MP_ROM_QSTR(MP_QSTR_brake), MP_ROM_PTR(&orb_motor_brake_obj) },
-    { MP_ROM_QSTR(MP_QSTR_run), MP_ROM_PTR(&orb_motor_run_obj) },
+static const mp_rom_map_elem_t orb_ev3_motor_local_dict_table[] = {
+    { MP_ROM_QSTR(MP_QSTR_brake), MP_ROM_PTR(&orb_ev3_motor_brake_obj) },
+    { MP_ROM_QSTR(MP_QSTR_run), MP_ROM_PTR(&orb_ev3_motor_run_obj) },
     //{ MP_ROM_QSTR(MP_QSTR_move_to), MP_ROM_PTR(&orb_motor_move_to_obj) },
 };
 
-static MP_DEFINE_CONST_DICT(orb_motor_local, orb_motor_local_dict_table);
+static MP_DEFINE_CONST_DICT(orb_ev3_motor_local, orb_ev3_motor_local_dict_table);
 
  MP_DEFINE_CONST_OBJ_TYPE(
-    orb_motor_type,
-    MP_QSTR_Motor,
+    orb_ev3_motor_type,
+    MP_QSTR_EV3_Motor,
     MP_TYPE_FLAG_NONE,
-    make_new, mp_orb_motor_make_new,
-    locals_dict, &orb_motor_local
+    make_new, mp_orb_ev3_motor_make_new,
+    locals_dict, &orb_ev3_motor_local
     );

@@ -1,1 +1,5 @@
-MP_REGISTER_ROOT_POINTER(int orb_initialised);
+MP_REGISTER_ROOT_POINTER(int devices_initialised);
+
+MP_REGISTER_ROOT_POINTER(int orb_constants_initialised);
+
+MP_REGISTER_ROOT_POINTER(int orb_motors_initialised);

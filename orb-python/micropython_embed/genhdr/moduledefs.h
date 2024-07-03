@@ -12,20 +12,25 @@ extern const struct _mp_obj_module_t mp_module_gc;
 #undef MODULE_DEF_GC
 #define MODULE_DEF_GC { MP_ROM_QSTR(MP_QSTR_gc), MP_ROM_PTR(&mp_module_gc) },
 
-extern const struct _mp_obj_module_t orb_module;
-#undef MODULE_DEF_ORB
-#define MODULE_DEF_ORB { MP_ROM_QSTR(MP_QSTR_orb), MP_ROM_PTR(&orb_module) },
+extern const struct _mp_obj_module_t orb_module_constants;
+#undef MODULE_DEF_ORB_DOT_CONSTANTS
+#define MODULE_DEF_ORB_DOT_CONSTANTS { MP_ROM_QSTR(MP_QSTR_orb_dot_constants), MP_ROM_PTR(&orb_module_constants) },
 
-extern const struct _mp_obj_module_t orb_module_sensor;
-#undef MODULE_DEF_ORB_DOT_SENSOR
-#define MODULE_DEF_ORB_DOT_SENSOR { MP_ROM_QSTR(MP_QSTR_orb_dot_sensor), MP_ROM_PTR(&orb_module_sensor) },
+extern const struct _mp_obj_module_t orb_module_devices;
+#undef MODULE_DEF_ORB_DOT_DEVICES
+#define MODULE_DEF_ORB_DOT_DEVICES { MP_ROM_QSTR(MP_QSTR_orb_dot_devices), MP_ROM_PTR(&orb_module_devices) },
+
+extern const struct _mp_obj_module_t orb_module_motors;
+#undef MODULE_DEF_ORB_DOT_MOTORS
+#define MODULE_DEF_ORB_DOT_MOTORS { MP_ROM_QSTR(MP_QSTR_orb_dot_motors), MP_ROM_PTR(&orb_module_motors) },
 
 
 #define MICROPY_REGISTERED_MODULES \
     MODULE_DEF_BUILTINS \
     MODULE_DEF_GC \
-    MODULE_DEF_ORB \
-    MODULE_DEF_ORB_DOT_SENSOR \
+    MODULE_DEF_ORB_DOT_CONSTANTS \
+    MODULE_DEF_ORB_DOT_DEVICES \
+    MODULE_DEF_ORB_DOT_MOTORS \
     MODULE_DEF___MAIN__ \
 // MICROPY_REGISTERED_MODULES
 

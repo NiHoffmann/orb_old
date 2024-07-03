@@ -20,7 +20,7 @@ typedef struct _orb_led_obj_t {
 } orb_led_obj_t;
 
 //when creating a pin instance this is called
-static mp_obj_t mp_orb_led_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *all_args) {
+static mp_obj_t orb_led_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *all_args) {
     //allowed args, just id�atm
     enum { ARG_id, ARG_mode };
     static const mp_arg_t allowed_args[] = {
@@ -103,7 +103,6 @@ static mp_obj_t orb_led_blink(size_t n_args, const mp_obj_t *pos_args, mp_map_t 
 }
 static MP_DEFINE_CONST_FUN_OBJ_KW(orb_led_blink_obj, 0, orb_led_blink);
 
-
 //our orb.led function table
 //this registers the led.value() function with out led
 static const mp_rom_map_elem_t orb_led_local_dict_table[] = {
@@ -117,10 +116,10 @@ static const mp_rom_map_elem_t orb_led_local_dict_table[] = {
 static MP_DEFINE_CONST_DICT(orb_led_local, orb_led_local_dict_table);
 
 //this defines our led class, use this define to add to orb module table
- MP_DEFINE_CONST_OBJ_TYPE(
+MP_DEFINE_CONST_OBJ_TYPE(
     orb_led_type,
-    MP_QSTR_Led,
+    MP_QSTR_led,
     MP_TYPE_FLAG_NONE,
-    make_new, mp_orb_led_make_new,
+    make_new, orb_led_make_new,
     locals_dict, &orb_led_local
-    );
+);

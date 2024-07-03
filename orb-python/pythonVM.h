@@ -3,8 +3,6 @@
 #include "py/obj.h"
 #include "py/mphal.h"
 #include "py/runtime.h"
-#include "py/obj.h"
-#include "py/mphal.h"
 
 extern "C"{
     #include <port/micropython_embed.h>
@@ -21,6 +19,6 @@ void stopProgram();
 
 // This is example 2 script, which will be compiled and executed.
 static const char *example =
-    "from orb import sensor\n"
-    "print(sensor)\n"
+    "from orb.motors import ev3_motor\n"
+    "print(ev3_motor)"
     ;

@@ -20,6 +20,8 @@ Q(EOFError)
 
 Q(EOFError)
 
+Q(EV3_Motor)
+
 Q(Ellipsis)
 
 Q(Ellipsis)
@@ -58,8 +60,6 @@ Q(LED_2)
 
 Q(LED_POWER)
 
-Q(Led)
-
 Q(LookupError)
 
 Q(LookupError)
@@ -75,8 +75,6 @@ Q(M4)
 Q(MemoryError)
 
 Q(MemoryError)
-
-Q(Motor)
 
 Q(NameError)
 
@@ -200,6 +198,10 @@ Q(__init__)
 
 Q(__init__)
 
+Q(__init__)
+
+Q(__init__)
+
 Q(__int__)
 
 Q(__isub__)
@@ -217,6 +219,8 @@ Q(__main__)
 Q(__main__)
 
 Q(__module__)
+
+Q(__name__)
 
 Q(__name__)
 
@@ -392,6 +396,8 @@ Q(endswith)
 
 Q(errno)
 
+Q(ev3_motor)
+
 Q(eval)
 
 Q(exec)
@@ -498,6 +504,10 @@ Q(keys)
 
 Q(keys)
 
+Q(led)
+
+Q(led)
+
 Q(len)
 
 Q(list)
@@ -536,13 +546,17 @@ Q(object)
 
 Q(oct)
 
-Q(orb)
+Q(orb_dot_constants)
 
-Q(orb)
+Q(orb_dot_constants)
 
-Q(orb_dot_sensor)
+Q(orb_dot_devices)
 
-Q(orb_dot_sensor)
+Q(orb_dot_devices)
+
+Q(orb_dot_motors)
+
+Q(orb_dot_motors)
 
 Q(ord)
 
@@ -551,6 +565,8 @@ Q(pop)
 Q(pop)
 
 Q(popitem)
+
+Q(port)
 
 Q(port)
 
@@ -591,8 +607,6 @@ Q(run)
 Q(send)
 
 Q(send)
-
-Q(sensor)
 
 Q(sep)
 
