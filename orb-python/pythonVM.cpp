@@ -16,11 +16,11 @@ void run(){
     delete byteArray;
 
     mp_embed_exec_str(example);
-
     // Deinitialise MicroPython.
     mp_embed_deinit();
 }
 
+//TODO this is supposed to read the program length and program from flash
 uint8_t* loadProgram(){
     std::ifstream file("test.mpy", std::ios::binary);
     if (!file.is_open()) {
