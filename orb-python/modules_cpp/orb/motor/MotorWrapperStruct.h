@@ -2,7 +2,7 @@
 #if ORB_FIRMWARE == 1 && EMB_SYS_LIB == 1
     #include "lib.h"
     #include "MotorTask.h"
-    #include "orb/port/portenums.h"
+    #include "orb/constants/port/portenums.h"
     #include "Properties.h"
 
     extern MotorTask mTask[];

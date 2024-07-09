@@ -1,7 +1,7 @@
 //here i do the adding functions to led stuff
 #if ORB_FIRMWARE == 1 && EMB_SYS_LIB == 1
 #include "lib.h"
-#include "orb/led/ledenums.h"
+#include "orb/devices/led/ledenums.h"
 extern Digital ledUsr1;
 extern Digital ledUsr2;
 extern Digital ledPwr;

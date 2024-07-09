@@ -42,7 +42,7 @@ static mp_obj_t orb_led_make_new(const mp_obj_type_t *type, size_t n_args, size_
     //get pointer from led const array (shared objects for user leds)
     orb_led_obj_t *self =  m_new_obj(orb_led_obj_t);
     self->base.type = type;
-    self->wrapper = createLedWrapper(led_id);
+    self->wrapper = getLedWrapper(led_id);
 
     //TODO MAKE THIS A POINTER TO AN LED OBJECT WITH LED ID
     return MP_OBJ_FROM_PTR(self);

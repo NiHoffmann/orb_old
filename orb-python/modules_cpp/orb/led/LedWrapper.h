@@ -3,7 +3,7 @@
 struct LedWrapper;
 
 // Function to create an instance of LedWrapper
-struct LedWrapper* createLedWrapper(int ledId);
+struct LedWrapper* getLedWrapper(int ledId);
 
 // Function to print the value of LedWrapper
 int getLedValue(struct LedWrapper* wrapper);
@@ -12,6 +12,4 @@ void setLedValue(struct LedWrapper* wrapper, int value);
 
 void blinkLed(struct LedWrapper* wrapper, int interval, int duration);
 
-// Function to destroy an instance of LedWrapper
-void collect(struct LedWrapper* wrapper);
 #endif
