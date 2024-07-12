@@ -11,5 +11,4 @@ int getLedValue(struct LedWrapper* wrapper);
 void setLedValue(struct LedWrapper* wrapper, int value);
 
 void blinkLed(struct LedWrapper* wrapper, int interval, int duration);
-
 #endif

@@ -29,4 +29,3 @@ extern "C" int getLedValue(struct LedWrapper* wrapper) {
 extern "C" void blinkLed(struct LedWrapper* wrapper, int interval, int duration) {
     wrapper->instance->blink(interval, duration);
 }
-

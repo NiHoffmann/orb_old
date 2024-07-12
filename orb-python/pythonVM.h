@@ -22,3 +22,5 @@ static const char *example =
     "from orb.motors import ev3_motor\n"
     "print(ev3_motor)"
     ;
+
+//TODO make this whole thing a rtos task that can be registered and executed accordingly
