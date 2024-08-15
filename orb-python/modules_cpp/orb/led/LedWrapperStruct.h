@@ -1,4 +1,6 @@
 //here i do the adding functions to led stuff
+#include "orb/devices/led/ledenums.h"
+
 #if ORB_FIRMWARE == 1 && EMB_SYS_LIB == 1
 #include "lib.h"
 #include "orb/devices/led/ledenums.h"

@@ -13,9 +13,9 @@
 #define MICROPY_ENABLE_GC                       (1)
 #define MICROPY_PY_GC                           (1)
 #define MICROPY_FLOAT_IMPL                      (MICROPY_FLOAT_IMPL_FLOAT)
-#define MICROPY_FLOAT                           (1)
+#define MICROPY_FLOAT                           (0)
 //enable mpy
-#define MICROPY_PERSISTENT_CODE_LOAD            (0)
+#define MICROPY_PERSISTENT_CODE_LOAD            (1)
 //disable string execution
 #define MICROPY_ENABLE_COMPILER                 (1)
 

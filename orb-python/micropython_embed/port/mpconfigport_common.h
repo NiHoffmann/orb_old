@@ -33,12 +33,7 @@ typedef uintptr_t mp_uint_t; // must be pointer size
 typedef long mp_off_t;
 
 // Need to provide a declaration/definition of alloca()
-#if defined(__FreeBSD__) || defined(__NetBSD__)
-#include <stdlib.h>
-#elif defined(_WIN32)
+
 #include <malloc.h>
-#else
-#include <alloca.h>
-#endif
 
 #define MICROPY_MPHALPORT_H "port/mphalport.h"
